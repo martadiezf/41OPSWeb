@@ -281,7 +281,9 @@ export class SectionsContainerComponent implements OnDestroy {
         container.addEventListener('wheel', this.wheelHandler, { passive: true });
         container.addEventListener('touchstart', this.touchStartHandler, { passive: true });
         container.addEventListener('touchend', this.touchEndHandler, { passive: true });
-        document.addEventListener('keydown', this.keyHandler);
+        if (typeof document !== 'undefined') {
+            document.addEventListener('keydown', this.keyHandler);   // o removeEventListener en la 499
+        }
     }
 
     /* ───────── Horizontal ───────── */
@@ -298,7 +300,9 @@ export class SectionsContainerComponent implements OnDestroy {
         container.addEventListener('wheel', this.wheelHandler, { passive: false });
         container.addEventListener('touchstart', this.touchStartHandler, { passive: true });
         container.addEventListener('touchend', this.touchEndHandler, { passive: true });
-        document.addEventListener('keydown', this.keyHandler);
+        if (typeof document !== 'undefined') {
+            document.addEventListener('keydown', this.keyHandler);   // o removeEventListener en la 499
+        }
     }
 
     private onWheel(e: WheelEvent) {
@@ -436,6 +440,7 @@ export class SectionsContainerComponent implements OnDestroy {
     }
 
     private shouldEnableGlobalSnap(): boolean {
+        if (typeof window === 'undefined') return false;
         return window.matchMedia('(min-width: 901px) and (pointer: fine)').matches;
     }
 
@@ -496,6 +501,8 @@ export class SectionsContainerComponent implements OnDestroy {
         container.removeEventListener('wheel', this.wheelHandler);
         container.removeEventListener('touchstart', this.touchStartHandler);
         container.removeEventListener('touchend', this.touchEndHandler);
-        document.removeEventListener('keydown', this.keyHandler);
+        if (typeof document !== 'undefined') {
+            document.removeEventListener('keydown', this.keyHandler);   // o removeEventListener en la 499
+        }
     }
 }
