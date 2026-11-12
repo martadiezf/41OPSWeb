@@ -90,7 +90,7 @@ export const EN: Translations = {
     stealth: {
         label: 'Stealth mode',
         title: 'Our edge stays private',
-        text: 'We have moved from highly open to stealth mode. In most things we run opposite to the providers\' momentum. Having built a strong brand, we are now going secretive, as the best hedge funds do. We protect our own IP to the maximum, and that of our selected clients: companies that can become partners and, more naturally, SciTheWorld\'s portfolio of spin-offs.',
+        text: 'We have recently started to operate in stealth mode. Having built a strong brand in the open, we now do what the best hedge funds do. While most providers move towards openness, we protect intellectual property: our own, and that of the few we work with. That means selected clients who can become partners and, above all, the companies in SciTheWorld\'s portfolio of spin-offs.',
     },
     seo: {
         title: '41OPS | The only training that reaches tech production',

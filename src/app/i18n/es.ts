@@ -90,7 +90,7 @@ export const ES: Translations = {
     stealth: {
         label: 'Modo sigilo',
         title: 'Nuestra ventaja, en privado',
-        text: 'Hemos pasado de ser muy abiertos a operar en modo sigilo. En casi todo vamos a contracorriente de los proveedores. Tras construir una marca sólida, ahora nos volvemos discretos, como hacen los mejores hedge funds. Protegemos al máximo nuestra propiedad intelectual y la de nuestros clientes seleccionados: empresas que pueden convertirse en socias y, de forma más natural, la cartera de spin-offs de SciTheWorld.',
+        text: 'Hemos empezado recientemente a operar en modo sigilo. Tras construir una marca sólida a la vista de todos, ahora hacemos lo que hacen los mejores hedge funds. Mientras la mayoría de los proveedores apuestan por la apertura, nosotros protegemos la propiedad intelectual: la nuestra y la de quienes trabajan con nosotros. Es decir, clientes seleccionados que pueden convertirse en socios y, sobre todo, las empresas de la cartera de spin-offs de SciTheWorld.',
     },
     seo: {
         title: '41OPS | La única formación que llega a producción',
