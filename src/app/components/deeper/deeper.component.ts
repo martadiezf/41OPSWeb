@@ -42,7 +42,7 @@ export interface DeeperTile {
   `,
     styles: [`
     :host { display: block; width: 100%; scroll-snap-align: start; }
-    .deeper { background: #F3F1E7; color: #1a1a1a; padding: var(--section-y) 0; font-family: 'Inter', sans-serif; overflow-x: clip; }
+    .deeper { background: #f4f1ea; color: #1a1a1a; padding: var(--section-y) 0; font-family: 'Inter', sans-serif; overflow-x: clip; }
     .deeper-inner { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 var(--section-x); box-sizing: border-box; }
     .deeper .bracket-label { margin-bottom: 1rem; }
     .deeper-title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; line-height: 1.15; margin: 0 0 0.75rem; }

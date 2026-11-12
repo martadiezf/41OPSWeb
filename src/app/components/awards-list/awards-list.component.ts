@@ -99,6 +99,8 @@ interface Award {
       color: #000;
     }
 
+    .award-row:last-child { margin-bottom: 0; }
+
     .col-year {
       text-align: left; /* Align left for consistency */
       opacity: 0.8;

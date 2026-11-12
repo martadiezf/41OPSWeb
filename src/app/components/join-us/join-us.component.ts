@@ -197,7 +197,7 @@ export interface JobOffer {
        JOBS GRID SECTION
        ═══════════════════════════════════════════════════════ */
     .jobs-section {
-      padding: 4rem 120px 6rem 120px;
+      padding: 4rem 120px var(--section-y) 120px;
       position: relative;
       max-width: 1000px;
       margin: 0 auto;
@@ -520,7 +520,7 @@ export interface JobOffer {
       }
 
       .jobs-section {
-        padding: 3rem 1.5rem 4rem 1.5rem;
+        padding: 3rem 1.5rem var(--section-y) 1.5rem;
       }
 
       .jobs-grid {

@@ -105,7 +105,7 @@ interface Logo {
       max-width: none;
       margin: 0;
       overflow: hidden;
-      padding: 0.5rem 0 var(--section-y);
+      padding: 0.5rem 0 calc(var(--section-y) - 25px); /* logo rows are 100px tall with 50px logos */
       /* Fading effect on the edges */
       mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
       -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
@@ -133,7 +133,7 @@ interface Logo {
       }
       
       .carousel-wrapper {
-        padding: 1rem 0 !important;
+        padding: 0.5rem 0 calc(var(--section-y) - 25px) !important;
       }
     }
 

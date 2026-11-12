@@ -52,7 +52,7 @@ export interface WaysContent {
   `,
     styles: [`
     :host { display: block; width: 100%; scroll-snap-align: start; }
-    .tr { background: #F3F1E7; color: #1a1a1a; padding: var(--section-y) var(--section-x); display: flex; justify-content: center; font-family: 'Inter', sans-serif; }
+    .tr { background: #f4f1ea; color: #1a1a1a; padding: var(--section-y) var(--section-x); display: flex; justify-content: center; font-family: 'Inter', sans-serif; }
     .tr-inner { width: 100%; max-width: 1080px; display: flex; flex-direction: column; gap: var(--block-gap); }
     .block { display: flex; flex-direction: column; }
 
