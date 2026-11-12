@@ -27,7 +27,7 @@ export const EN: Translations = {
             { title: 'Published paper', text: 'If feasible.' },
             { title: 'Product or company', text: 'On our platforms, or a new company.' },
         ],
-        pipelineNote: 'That is the level of our D in R&D. And every product and company we create grows SciTheWorld\'s conglomerate.',
+        pipelineNote: 'Our D does not stop at a proof of concept: it ends in a final product or a new company. That is an unbeatable D. And every product and company we create grows SciTheWorld\'s conglomerate.',
         intro: 'We help clients put order into their transformation challenges through laser-focused training: the overall picture of AI Ops (new working protocols), the tech enablers, the ML involved, and the risk of each.',
         stepsLabel: 'What no other trainer can do',
         steps: [

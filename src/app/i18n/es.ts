@@ -27,7 +27,7 @@ export const ES: Translations = {
             { title: 'Paper publicado', text: 'Si es viable.' },
             { title: 'Producto o empresa', text: 'Sobre nuestras plataformas, o una nueva empresa.' },
         ],
-        pipelineNote: 'Ese es el nivel de nuestro D en I+D. Y cada producto y empresa que creamos hace crecer el conglomerado de SciTheWorld.',
+        pipelineNote: 'Nuestro D no se queda en una prueba de concepto: termina en un producto final o en una nueva empresa. Es un D imbatible. Y cada producto y empresa que creamos hace crecer el conglomerado de SciTheWorld.',
         intro: 'Ayudamos a nuestros clientes a poner orden en sus retos de transformación mediante formación muy focalizada: la visión global de AI Ops (nuevos protocolos de trabajo), los habilitadores tecnológicos, el ML implicado y el riesgo de cada uno.',
         stepsLabel: 'Lo que ningún otro formador puede hacer',
         steps: [
