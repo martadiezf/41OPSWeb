@@ -97,8 +97,6 @@ export const ES: Translations = {
             { who: 'Directivos y mandos', title: 'CALM', text: 'Una agenda de transformación priorizada, insights y formación focalizada, para que todos compartan la misma visión antes de invertir.' },
             { who: 'Equipos', title: 'Back to the Future', text: 'Prueba antes de comprar: aprende los límites haciendo, sobre tus propios retos, y llévate tu propio artefacto.' },
         ],
-        cta: 'Pide el programa',
-        ctaNote: 'Cuéntanos tu reto y volvemos con una propuesta.',
     },
     edge: {
         label: 'Confidencial por diseño',

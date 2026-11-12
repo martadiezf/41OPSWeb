@@ -62,9 +62,7 @@ const tr = t.training;
 full.push(`## ${tr.label}: ${tr.title}
 ${tr.lead}
 
-${tr.audiences.map((x) => `- **${x.title}** (${x.who.toLowerCase()}): ${x.text}`).join('\n')}
-
-${tr.cta}: hello@41ops.com. ${tr.ctaNote}`);
+${tr.audiences.map((x) => `- **${x.title}** (${x.who.toLowerCase()}): ${x.text}`).join('\n')}`);
 
 full.push(`## ${a.title.replace(/‑/g, '-')}
 ${a.lead}

@@ -43,8 +43,6 @@ export interface Translations {
         title: string;
         lead: string;
         audiences: Array<{ who: string; title: string; text: string }>;
-        cta: string;
-        ctaNote: string;
     };
     edge: {
         label: string;

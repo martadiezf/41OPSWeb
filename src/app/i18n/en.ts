@@ -97,8 +97,6 @@ export const EN: Translations = {
             { who: 'Executives and managers', title: 'CALM', text: 'A ranked transformation agenda, insights and targeted training, so everyone shares the same picture before investing.' },
             { who: 'Teams', title: 'Back to the Future', text: 'Try before you buy: learn the limits by doing, on your own challenges, and leave with your own artifact.' },
         ],
-        cta: 'Ask for the programme',
-        ctaNote: 'Tell us your challenge and we come back with a proposal.',
     },
     edge: {
         label: 'Confidential by design',

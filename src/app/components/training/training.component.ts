@@ -5,8 +5,6 @@ export interface TrainingContent {
     title: string;
     lead: string;
     audiences: Array<{ who: string; title: string; text: string }>;
-    cta: string;
-    ctaNote: string;
 }
 
 export interface WaysContent {
@@ -65,10 +63,6 @@ export interface WaysContent {
           <p class="closing">{{ w().closing }}</p>
         </div>
 
-        <div class="cta-row">
-          <a class="cta" href="mailto:hello@41ops.com?subject=41OPS%20training%20programme">{{ c().cta }}</a>
-          <span class="cta-note">{{ c().ctaNote }}</span>
-        </div>
       </div>
     </section>
   `,
@@ -98,11 +92,6 @@ export interface WaysContent {
     .mode-text { font-size: 1.02rem; line-height: 1.6; color: #3d3d3d; margin: 0; }
     .closing { font-size: 1.05rem; line-height: 1.6; color: #3d3d3d; margin: 2rem 0 0; }
 
-    .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
-    .cta { display: inline-block; background: var(--color-1, #E85D04); color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 1.1rem; padding: 1rem 1.75rem; border-radius: 999px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .cta:hover, .cta:focus-visible { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(232, 93, 4, 0.3); }
-    .cta:focus-visible { outline: 2px solid #1a1a1a; outline-offset: 3px; }
-    .cta-note { font-size: 0.98rem; color: #5a5a5a; }
 
     @media (max-width: 900px) {
       .audiences, .doors, .modes { grid-template-columns: minmax(0, 1fr); }
