@@ -2,90 +2,189 @@
     display: block;
     width: 100%;
     scroll-snap-align: start;
-    scroll-snap-stop: always;
 }
 
-.stw-container {
-    padding: 80px 5% 120px 5%;
+.stw {
+    background-color: #F3F1E7;
+    color: #1a1a1a;
+    padding: 96px 5% 120px;
     display: flex;
     justify-content: center;
-    background-color: var(--stw-bg-color, #F3F1E7);
+    font-family: 'Inter', sans-serif;
 }
 
-.content-wrapper {
-    max-width: 900px;
+.stw-inner {
     width: 100%;
+    max-width: 1080px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 3rem;
-}
-
-.title-col {
-    width: 100%;
-}
-
-.desc-col {
-    width: 100%;
 }
 
 .stw-title {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.25rem);
     font-weight: 400;
     line-height: 1.05;
-    margin: 0;
     letter-spacing: -0.01em;
+    margin: 0 0 2.5rem;
+    text-align: center;
 }
 
-/* Style for underlined text passed via innerHTML */
-::ng-deep .stw-title u,
-::ng-deep .stw-title span.underline {
+::ng-deep .stw-title u {
     text-decoration: none;
     border-bottom: 4px solid currentColor;
-    font-style: normal;
     font-weight: 700;
     padding-bottom: 2px;
-    display: inline-block;
-    line-height: inherit;
 }
 
-.stw-description {
-    font-size: 1.55rem;
-    line-height: 1.7;
-    font-weight: 100;
-    margin: 0 auto;
+.stw-lead {
+    font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+    font-weight: 600;
+    line-height: 1.35;
     letter-spacing: -0.01em;
-    max-width: 800px;
-    white-space: pre-line;
-    text-align: left;
+    margin: 0 auto 1.5rem;
+    max-width: 880px;
+    text-align: center;
 }
 
-::ng-deep .part-stw-extension {
-    font-size: 0.85em;
-    display: block;
-    margin-top: 1.5rem;
+.stw-intro {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #3d3d3d;
+    margin: 0 auto 4rem;
+    max-width: 760px;
+    text-align: center;
+}
+
+.stw-label {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-size: 1.35rem;
+    letter-spacing: 0.08em;
+    color: var(--color-1, #E85D04);
+    margin: 0 0 1.25rem;
+}
+
+/* Steps */
+.steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.step {
+    background: #FFFFFF;
+    border: 1px solid #E2DED1;
+    border-radius: 14px;
+    padding: 1.75rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.step-number {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--color-1, #E85D04);
+}
+
+.step-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.step-tag {
+    align-self: flex-start;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    background: #F3F1E7;
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+}
+
+.step-text {
+    font-size: 1.02rem;
+    line-height: 1.55;
+    color: #3d3d3d;
+    margin: 0.25rem 0 0;
+}
+
+.steps-note {
+    font-size: 1rem;
+    font-style: italic;
+    color: #5a5a5a;
+    margin: 1.25rem 0 4rem;
+}
+
+/* Two ways in */
+.doors {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 4rem;
+}
+
+.door {
+    background: #1a1a1a;
+    color: #F3F1E7;
+    border-radius: 14px;
+    padding: 2rem;
+}
+
+.door-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+}
+
+.door-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #cfcbbf;
+    margin: 0;
+}
+
+/* Modes */
+.modes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.mode {
+    border-left: 3px solid var(--color-1, #E85D04);
+    padding-left: 1.25rem;
+}
+
+.mode-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+}
+
+.mode-text {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: #3d3d3d;
+    margin: 0;
+}
+
+.stw-closing {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #3d3d3d;
+    margin: 2rem 0 0;
 }
 
 @media (max-width: 900px) {
-    .content-wrapper {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .title-col,
-    .desc-col {
-        flex: auto;
-        max-width: 100%;
-        padding-top: 0;
-    }
-
-    .stw-title {
-        font-size: clamp(2.5rem, 8vw, 4rem);
-    }
-
-    .stw-description {
-        font-size: 1.25rem;
-    }
+    .stw { padding: 72px 6% 96px; }
+    .steps, .doors, .modes { grid-template-columns: minmax(0, 1fr); }
+    .stw-intro { margin-bottom: 3rem; }
 }

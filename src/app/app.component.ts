@@ -7,6 +7,7 @@ import { AwardsListComponent } from './components/awards-list/awards-list.compon
 import { LogoCarouselComponent } from './components/logo-carousel/logo-carousel.component';
 import { NavBarComponent, NavCommand } from './components/nav-bar/nav-bar.component';
 import { PartStwComponent } from './components/part-stw/part-stw.component';
+import { ApproachComponent } from './components/approach/approach.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
 import { CursorFollowerComponent } from './components/cursor-follower/cursor-follower.component';
 import { PapersListComponent, Paper } from './components/papers-list/papers-list.component';
@@ -50,6 +51,7 @@ interface SectionData {
     AwardsListComponent,
     LogoCarouselComponent,
     PartStwComponent,
+    ApproachComponent,
 
     PreloaderComponent,
     CursorFollowerComponent,
@@ -93,10 +95,9 @@ interface SectionData {
       [description]="ts.t().hero.description"
     />
 
-    <app-part-stw
-      [titleHtml]="ts.t().partStw.titleHtml"
-      [description]="ts.t().partStw.description"
-    />
+    <app-part-stw [content]="ts.t().partStw" />
+
+    <app-approach id="approach" [content]="ts.t().approach" />
 
     <app-accordion
       id="highlights-accordion"

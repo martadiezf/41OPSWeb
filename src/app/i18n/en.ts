@@ -17,7 +17,90 @@ export const EN: Translations = {
     },
     partStw: {
         titleHtml: 'Part of <u>SciTheWorld</u>',
-        description: '<strong>SciTheWorld is a boutique family business in state-of-the-art investing: not a fund, a conglomerate built on its own R&D. Algorithmization is the R. 41OPS is the D.</strong>\n\nWe help clients put order into their transformation challenges through laser-focused training. It covers the overall picture of AI Ops (new working protocols), the tech enablers, the ML involved, and the risk of each.\n\nWhat no other trainer can do:\n1. Train, on the bleeding edge. The training is built on the discoveries published at algorithmization.com. What you take away is your own final artifact.\n2. Pre-prod, at ease. We connect your artifact to our platform: Fractal if an AI OS is involved, Alpha Dynamics if advanced investment is. All of a sudden, your artifact is deeptech.\n3. Prod, for every stakeholder. We meet the needs of your CTO, CISO, compliance team and everyone else, and define the final architecture that goes into production. All of a sudden, you have transformed yourself.\nEach step happens only if the previous one leads there.\n\n<div class="part-stw-extension">What does it mean? Depending on the project\'s nature, we are:\n\n– When top-down: your C-Suite Consultancy but upon bottom-up executable tech instead of Powerpoint.\n– When bottom-up: your tech consultancy but Custom SaaS instead of old school projects.\n\nAnd then, you can interconnect those projects within your company (departments and legacies up to your own algo-native OS) or with partners (unlocking trust upon novel auditability).</div>',
+        lead: 'SciTheWorld is a boutique family business in state-of-the-art investing: not a fund, a conglomerate built on its own R&D. Algorithmization is the R. 41OPS is the D.',
+        intro: 'We help clients put order into their transformation challenges through laser-focused training: the overall picture of AI Ops (new working protocols), the tech enablers, the ML involved, and the risk of each.',
+        stepsLabel: 'What no other trainer can do',
+        steps: [
+            {
+                number: '01',
+                title: 'Train, on the bleeding edge',
+                tag: 'CALM · Back to the Future',
+                text: 'The training is built on the discoveries published at algorithmization.com. What you take away is your own final artifact.',
+            },
+            {
+                number: '02',
+                title: 'Pre-prod, at ease',
+                tag: 'Data MAPs',
+                text: 'We connect your artifact to our platform: Fractal if an AI OS is involved, Alpha Dynamics if advanced investment is. All of a sudden, your artifact is deeptech.',
+            },
+            {
+                number: '03',
+                title: 'Prod, for every stakeholder',
+                tag: 'Data MAPs',
+                text: 'We meet the needs of your CTO, CISO, compliance team and everyone else, and define the final architecture that goes into production. All of a sudden, you have transformed yourself.',
+            },
+        ],
+        stepsNote: 'Each step happens only if the previous one leads there.',
+        doorsLabel: 'Two ways in',
+        doors: [
+            {
+                title: 'You know the pain',
+                text: 'We bring a laser-focused proof of concept, connected to your tech stack, and show the fix working. Seen, not heard.',
+            },
+            {
+                title: 'You want to transform',
+                text: 'Three packages, in order: CALM (ranking, insights and targeted training), Back to the Future (try before you buy), and Data MAPs (your processes and tech stack algorithmized, on Fractal).',
+            },
+        ],
+        modesLabel: 'Depending on the project, we are',
+        modes: [
+            {
+                title: 'Top-down',
+                text: 'Your C-suite consultancy, but built on bottom-up executable tech instead of PowerPoint.',
+            },
+            {
+                title: 'Bottom-up',
+                text: 'Your tech consultancy, but delivering custom SaaS instead of old-school projects.',
+            },
+        ],
+        closing: 'Then you can interconnect those projects within your company (departments and legacy systems, up to your own algo-native OS) or with partners (unlocking trust through novel auditability).',
+    },
+    approach: {
+        eyebrow: 'How we work',
+        title: 'Algo‑driven, not data‑driven',
+        lead: 'You cannot ask an LLM what to do next based on its literacy. Decisions need your data plus laser-focused models: prediction, recommendation, simulation and optimization.',
+        columns: [
+            {
+                title: 'Data-driven',
+                subtitle: 'What you are used to',
+                steps: ['Collect data', 'Clean it', 'Model it', 'Hope operations find value in it'],
+                artifact: 'Its artifact: the spreadsheet. Data, democratized.',
+            },
+            {
+                title: 'Algo-driven',
+                subtitle: 'The opposite, yet more realistic',
+                steps: ['The project asks for the operations', 'The operations ask for models', 'The models ask for data', 'The data asks for a data model and data quality'],
+                artifact: 'Its artifact: a living framework, integrated fast into operations, and accurate.',
+                highlight: true,
+            },
+        ],
+        timeline: [
+            { label: 'Yesterday', title: 'The spreadsheet', text: 'Data, democratized.' },
+            { label: 'Today', title: 'The HTML', text: 'Closer to operations and their integration, but the science is still missing.' },
+            { label: 'With us', title: 'The algorithmized artifact', text: 'The framework to keep improving forever: expert views, new processes and operations, and algorithms merging both with further science.' },
+        ],
+        m1Label: 'Our edge · M1',
+        m1Title: 'Novel ML models, built for each problem',
+        m1Text: 'We create new models fitted to your data and constraints, instead of reusing generic ones. That is why a complex recommender beats an LLM-based one.',
+        plugLabel: 'Plug and play',
+        plugTitle: 'Plug your artifact into Fractal, and play',
+        plugLead: 'Once plugged in, every artifact keeps fine-tuning towards maximal accuracy of its protocols (operations) and models.',
+        layers: [
+            { title: 'Agentic', text: 'Strategies, LLMs and ML agents working together, for accuracy, control, auditability and traceability.' },
+            { title: 'Secure', text: 'Beyond military grade: closed end to end, like a Mac; built to assume breach; federated for maximal IP protection.' },
+            { title: 'Algorithmized', text: 'Bespoke M1 models and Alpha Dynamics precision: from the data to the algorithm.' },
+        ],
+        closing: 'Applied science, not just science applied.',
     },
     highlights: {
         sectionTitle: 'HIGHLIGHTS',

@@ -15,7 +15,31 @@ export interface Translations {
     };
     partStw: {
         titleHtml: string;
-        description: string;
+        lead: string;
+        intro: string;
+        stepsLabel: string;
+        steps: Array<{ number: string; title: string; tag: string; text: string }>;
+        stepsNote: string;
+        doorsLabel: string;
+        doors: Array<{ title: string; text: string }>;
+        modesLabel: string;
+        modes: Array<{ title: string; text: string }>;
+        closing: string;
+    };
+    approach: {
+        eyebrow: string;
+        title: string;
+        lead: string;
+        columns: Array<{ title: string; subtitle: string; steps: string[]; artifact: string; highlight?: boolean }>;
+        timeline: Array<{ label: string; title: string; text: string }>;
+        m1Label: string;
+        m1Title: string;
+        m1Text: string;
+        plugLabel: string;
+        plugTitle: string;
+        plugLead: string;
+        layers: Array<{ title: string; text: string }>;
+        closing: string;
     };
     highlights: {
         sectionTitle: string;

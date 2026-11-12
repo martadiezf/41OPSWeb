@@ -17,7 +17,90 @@ export const ES: Translations = {
     },
     partStw: {
         titleHtml: 'Parte de <u>SciTheWorld</u>',
-        description: '<strong>SciTheWorld es un negocio familiar boutique de inversión de vanguardia: no un fondo, sino un conglomerado construido sobre su propio I+D. Algorithmization es la I. 41OPS es el D.</strong>\n\nAyudamos a nuestros clientes a poner orden en sus retos de transformación mediante formación muy focalizada. Cubre la visión global de AI Ops (nuevos protocolos de trabajo), los habilitadores tecnológicos, el ML implicado y el riesgo de cada uno.\n\nLo que ningún otro formador puede hacer:\n1. Formación, en la vanguardia. La formación se basa en los descubrimientos publicados en algorithmization.com. Lo que te llevas es tu propio artefacto final.\n2. Preproducción, con facilidad. Conectamos tu artefacto a nuestra plataforma: Fractal si hay un sistema operativo de IA de por medio, Alpha Dynamics si se trata de inversión avanzada. De repente, tu artefacto es deeptech.\n3. Producción, para todos los interlocutores. Cumplimos con las necesidades de tu CTO, tu CISO, cumplimiento normativo y todos los demás, y definimos la arquitectura final que pasa a producción. De repente, te has transformado.\nCada paso, solo si el anterior lleva hasta él.\n\n<div class="part-stw-extension">¿Qué significa esto? Dependiendo de la naturaleza del proyecto, somos:\n\n– A nivel estratégico (top-down), somos una consultoría para la alta dirección, pero basada en tecnología real y ejecutable desde la base, en lugar de en simples PowerPoints.\n– A nivel operativo (bottom-up), somos una consultoría tecnológica, pero enfocada en crear SaaS a medida en lugar de los clásicos proyectos de la vieja escuela.\n\nEl resultado: la capacidad de interconectar estas soluciones dentro de tu propia empresa (integrando departamentos y sistemas heredados hasta formar tu propio sistema operativo algorítmico) o con socios (desbloqueando un nuevo nivel de confianza gracias a una auditabilidad sin precedentes).</div>',
+        lead: 'SciTheWorld es un negocio familiar boutique de inversión de vanguardia: no un fondo, sino un conglomerado construido sobre su propio I+D. Algorithmization es la I. 41OPS es el D.',
+        intro: 'Ayudamos a nuestros clientes a poner orden en sus retos de transformación mediante formación muy focalizada: la visión global de AI Ops (nuevos protocolos de trabajo), los habilitadores tecnológicos, el ML implicado y el riesgo de cada uno.',
+        stepsLabel: 'Lo que ningún otro formador puede hacer',
+        steps: [
+            {
+                number: '01',
+                title: 'Formación, en la vanguardia',
+                tag: 'CALM · Back to the Future',
+                text: 'La formación se basa en los descubrimientos publicados en algorithmization.com. Lo que te llevas es tu propio artefacto final.',
+            },
+            {
+                number: '02',
+                title: 'Preproducción, con facilidad',
+                tag: 'Data MAPs',
+                text: 'Conectamos tu artefacto a nuestra plataforma: Fractal si hay un sistema operativo de IA de por medio, Alpha Dynamics si se trata de inversión avanzada. De repente, tu artefacto es deeptech.',
+            },
+            {
+                number: '03',
+                title: 'Producción, para todos los interlocutores',
+                tag: 'Data MAPs',
+                text: 'Cumplimos con las necesidades de tu CTO, tu CISO, cumplimiento normativo y todos los demás, y definimos la arquitectura final que pasa a producción. De repente, te has transformado.',
+            },
+        ],
+        stepsNote: 'Cada paso, solo si el anterior lleva hasta él.',
+        doorsLabel: 'Dos formas de empezar',
+        doors: [
+            {
+                title: 'Conoces el problema',
+                text: 'Traemos una prueba de concepto muy focalizada, conectada a tu stack tecnológico, y te enseñamos la solución funcionando. Vista, no contada.',
+            },
+            {
+                title: 'Quieres transformarte',
+                text: 'Tres paquetes, en orden: CALM (ranking, insights y formación focalizada), Back to the Future (prueba antes de comprar) y Data MAPs (tus procesos y tu stack tecnológico algoritmizados, sobre Fractal).',
+            },
+        ],
+        modesLabel: 'Según el proyecto, somos',
+        modes: [
+            {
+                title: 'De arriba abajo',
+                text: 'Tu consultoría para la alta dirección, pero basada en tecnología ejecutable desde la base en lugar de en PowerPoints.',
+            },
+            {
+                title: 'De abajo arriba',
+                text: 'Tu consultoría tecnológica, pero creando SaaS a medida en lugar de los clásicos proyectos de la vieja escuela.',
+            },
+        ],
+        closing: 'Después, puedes interconectar esos proyectos dentro de tu empresa (departamentos y sistemas heredados, hasta tu propio sistema operativo algorítmico) o con socios (desbloqueando confianza gracias a una auditabilidad sin precedentes).',
+    },
+    approach: {
+        eyebrow: 'Cómo trabajamos',
+        title: 'Guiados por algoritmos, no por datos',
+        lead: 'No puedes preguntar a un LLM qué hacer a continuación basándote en su conocimiento general. Las decisiones necesitan tus datos y modelos muy focalizados: predicción, recomendación, simulación y optimización.',
+        columns: [
+            {
+                title: 'Guiado por datos',
+                subtitle: 'Lo que conoces',
+                steps: ['Recopilar datos', 'Limpiarlos', 'Modelizarlos', 'Esperar que operaciones les encuentre valor'],
+                artifact: 'Su artefacto: la hoja de cálculo. Los datos, democratizados.',
+            },
+            {
+                title: 'Guiado por algoritmos',
+                subtitle: 'Lo opuesto, pero más realista',
+                steps: ['El proyecto pide las operaciones', 'Las operaciones piden modelos', 'Los modelos piden datos', 'Los datos piden un modelo de datos y calidad de datos'],
+                artifact: 'Su artefacto: un marco vivo, integrado rápido en las operaciones, y preciso.',
+                highlight: true,
+            },
+        ],
+        timeline: [
+            { label: 'Ayer', title: 'La hoja de cálculo', text: 'Los datos, democratizados.' },
+            { label: 'Hoy', title: 'El HTML', text: 'Más cerca de las operaciones y su integración, pero aún falta la ciencia.' },
+            { label: 'Con nosotros', title: 'El artefacto algoritmizado', text: 'El marco para mejorar siempre: visiones de expertos, nuevos procesos y operaciones, y algoritmos que lo fusionan todo con más ciencia.' },
+        ],
+        m1Label: 'Nuestra ventaja · M1',
+        m1Title: 'Modelos de ML nuevos, creados para cada problema',
+        m1Text: 'Creamos modelos nuevos ajustados a tus datos y restricciones, en lugar de reutilizar modelos genéricos. Por eso un recomendador complejo supera a uno basado en LLMs.',
+        plugLabel: 'Conectar y usar',
+        plugTitle: 'Conecta tu artefacto a Fractal, y úsalo',
+        plugLead: 'Una vez conectado, cada artefacto sigue ajustándose hacia la máxima precisión de sus protocolos (operaciones) y modelos.',
+        layers: [
+            { title: 'Agéntico', text: 'Estrategias, LLMs y agentes de ML trabajando juntos, para precisión, control, auditabilidad y trazabilidad.' },
+            { title: 'Seguro', text: 'Más allá del grado militar: cerrado de extremo a extremo, como un Mac; diseñado asumiendo la brecha; federado para la máxima protección de la propiedad intelectual.' },
+            { title: 'Algoritmizado', text: 'Modelos M1 a medida y la precisión de Alpha Dynamics: de los datos al algoritmo.' },
+        ],
+        closing: 'Ciencia aplicada, no solo ciencia que se aplica.',
     },
     highlights: {
         sectionTitle: 'HIGHLIGHTS',
