@@ -631,3 +631,20 @@
         /* Hide "closed" title when expanded */
     }
 }
+/* Same section rhythm as the rest of the page: the sticky frame gets the
+   standard top/bottom padding and the cards fill whatever is left, so the gap
+   before and after Highlights matches every other section. */
+@media (min-width: 769px) {
+    .sticky-wrapper {
+        box-sizing: border-box;
+        justify-content: flex-start;
+        padding: var(--section-y) 0;
+    }
+
+    .scroll-cards-container {
+        flex: 1 1 auto;
+        min-height: 0;
+        height: auto;
+        margin-top: 0;
+    }
+}

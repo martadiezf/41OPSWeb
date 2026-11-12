@@ -11,7 +11,7 @@ export const ES: Translations = {
         contact: 'CONTACTO',
     },
     hero: {
-        title: 'La única formación que llega a producción',
+        title: 'La única formación que termina en producción',
         subtitle: '41OPS',
         description: '41OPS es la única empresa de formación que llega a producción tecnológica: Formación → Preproducción → Producción. Arquitecturas Extendidas de Producción (EPAs) ligeras sobre tus sistemas heredados para consumir IA de forma eficiente.',
     },
@@ -34,24 +34,24 @@ export const ES: Translations = {
         steps: [
             {
                 number: '01',
-                title: 'Formación, en la vanguardia',
-                tag: 'CALM · Back to the Future',
+                title: 'Un marco con todas las piezas',
+                tag: 'Formación · CALM · Back to the Future',
                 text: 'La formación se basa en los descubrimientos publicados en algorithmization.com. Lo que te llevas es tu propio artefacto final.',
             },
             {
                 number: '02',
-                title: 'Preproducción, con facilidad',
-                tag: 'Data MAPs',
+                title: 'Una app acordada con todos los usuarios',
+                tag: 'Preproducción · Data MAPs',
                 text: 'Conectamos tu artefacto a nuestra plataforma: Fractal si hay un sistema operativo de IA de por medio, Alpha Dynamics si se trata de inversión avanzada. De repente, tu artefacto es deeptech.',
             },
             {
                 number: '03',
-                title: 'Producción, para todos los interlocutores',
-                tag: 'Data MAPs',
+                title: 'Una app acordada con todos los stakeholders',
+                tag: 'Producción · Data MAPs',
                 text: 'Cumplimos con las necesidades de tu CTO, tu CISO, cumplimiento normativo y todos los demás, y definimos la arquitectura final que pasa a producción. De repente, te has transformado.',
             },
         ],
-        stepsNote: 'Cada paso, solo si el anterior lleva hasta él.',
+        stepsNote: 'Junto a ti, construimos una prueba de concepto muy focalizada. Después, recorre el camino entero con nosotros o detente donde decidas: formación, pre-producción o producción.',
         doorsLabel: 'Dos formas de empezar',
         doors: [
             {
@@ -104,7 +104,7 @@ export const ES: Translations = {
         text: 'Enseñamos abiertamente; lo que construyes con nosotros sigue siendo privado. Tus artefactos, tus datos y tu know-how están protegidos por diseño: federados, compartimentados y siempre tuyos.',
     },
     seo: {
-        title: '41OPS | La única formación que llega a producción',
+        title: '41OPS | La única formación que termina en producción',
         description: '41OPS, parte de SciTheWorld, forma a tu equipo en AI Ops, habilitadores tecnológicos y ML, y lleva tu artefacto a preproducción y producción sobre Fractal o Alpha Dynamics. EPAs ligeras sobre tus sistemas heredados.',
     },
     approach: {

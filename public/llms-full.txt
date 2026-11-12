@@ -1,4 +1,4 @@
-# 41OPS: the only training that reaches tech production
+# 41OPS: the only training that ends in production
 
 > 41OPS is the only training company that reaches tech production: Train → Pre-prod → Prod. Light Extended Production Architectures (EPAs) upon your legacy to consume AI efficiently.
 
@@ -27,11 +27,11 @@ Having built products and companies across state-of-the-art challenges, we see t
 We help clients put order into their transformation challenges through laser-focused training: the overall picture of AI Ops (new working protocols), the tech enablers, the ML involved, and the risk of each.
 
 ### What no other trainer can do
-01. **Train, on the bleeding edge** (CALM · Back to the Future): The training is built on the discoveries published at algorithmization.com. What you take away is your own final artifact.
-02. **Pre-prod, at ease** (Data MAPs): We connect your artifact to our platform: Fractal if an AI OS is involved, Alpha Dynamics if advanced investment is. All of a sudden, your artifact is deeptech.
-03. **Prod, for every stakeholder** (Data MAPs): We meet the needs of your CTO, CISO, compliance team and everyone else, and define the final architecture that goes into production. All of a sudden, you have transformed yourself.
+01. **A framework with all the pieces** (Train · CALM · Back to the Future): The training is built on the discoveries published at algorithmization.com. What you take away is your own final artifact.
+02. **An app agreed with all users** (Pre-prod · Data MAPs): We connect your artifact to our platform: Fractal if an AI OS is involved, Alpha Dynamics if advanced investment is. All of a sudden, your artifact is deeptech.
+03. **An app agreed with all stakeholders** (Prod · Data MAPs): We meet the needs of your CTO, CISO, compliance team and everyone else, and define the final architecture that goes into production. All of a sudden, you have transformed yourself.
 
-Each step happens only if the previous one leads there.
+Together with you, we build a laser-focused proof of concept. Then go all the way with us, or stop wherever you choose: training, pre-prod or prod.
 
 ### Two ways in
 - **You know the pain**: We bring a laser-focused proof of concept, connected to your tech stack, and show the fix working. Seen, not heard.
@@ -42,15 +42,6 @@ Each step happens only if the previous one leads there.
 - **Bottom-up**: Your tech consultancy, but delivering custom SaaS instead of old-school projects.
 
 Then you can interconnect those projects within your company (departments and legacy systems, up to your own algo-native OS) or with partners (unlocking trust through novel auditability).
-
----
-
-## Our training: Training that ends in production
-Laser-focused programmes, built on the bleeding edge published at algorithmization.com and run on your own challenges. Formats and length are tailored to each client.
-
-- **Board Programme** (boards): In person, with SciTheWorld's co-founders. For boards that need criteria, not a certificate.
-- **CALM** (executives and managers): A ranked transformation agenda, insights and targeted training, so everyone shares the same picture before investing.
-- **Back to the Future** (teams): Try before you buy: learn the limits by doing, on your own challenges, and leave with your own artifact.
 
 ---
 

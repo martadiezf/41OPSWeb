@@ -11,7 +11,7 @@ export const EN: Translations = {
         contact: 'CONTACT',
     },
     hero: {
-        title: 'The only training that reaches production',
+        title: 'The only training that ends in production',
         subtitle: '41OPS',
         description: '41OPS is the only training company that reaches tech production: Train → Pre-prod → Prod. Light Extended Production Architectures (EPAs) upon your legacy to consume AI efficiently.',
     },
@@ -34,24 +34,24 @@ export const EN: Translations = {
         steps: [
             {
                 number: '01',
-                title: 'Train, on the bleeding edge',
-                tag: 'CALM · Back to the Future',
+                title: 'A framework with all the pieces',
+                tag: 'Train · CALM · Back to the Future',
                 text: 'The training is built on the discoveries published at algorithmization.com. What you take away is your own final artifact.',
             },
             {
                 number: '02',
-                title: 'Pre-prod, at ease',
-                tag: 'Data MAPs',
+                title: 'An app agreed with all users',
+                tag: 'Pre-prod · Data MAPs',
                 text: 'We connect your artifact to our platform: Fractal if an AI OS is involved, Alpha Dynamics if advanced investment is. All of a sudden, your artifact is deeptech.',
             },
             {
                 number: '03',
-                title: 'Prod, for every stakeholder',
-                tag: 'Data MAPs',
+                title: 'An app agreed with all stakeholders',
+                tag: 'Prod · Data MAPs',
                 text: 'We meet the needs of your CTO, CISO, compliance team and everyone else, and define the final architecture that goes into production. All of a sudden, you have transformed yourself.',
             },
         ],
-        stepsNote: 'Each step happens only if the previous one leads there.',
+        stepsNote: 'Together with you, we build a laser-focused proof of concept. Then go all the way with us, or stop wherever you choose: training, pre-prod or prod.',
         doorsLabel: 'Two ways in',
         doors: [
             {
@@ -104,7 +104,7 @@ export const EN: Translations = {
         text: 'We teach openly; what you build with us stays private. Your artifacts, data and know-how are protected by design: federated, compartmentalised and yours to keep.',
     },
     seo: {
-        title: '41OPS | The only training that reaches tech production',
+        title: '41OPS | The only training that ends in production',
         description: '41OPS, part of SciTheWorld, trains your team on AI Ops, tech enablers and ML, then takes your artifact to pre-production and production on Fractal or Alpha Dynamics. Light EPAs upon your legacy.',
     },
     approach: {

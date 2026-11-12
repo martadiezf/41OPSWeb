@@ -24,7 +24,7 @@ export interface DeeperTile {
             <li>
               <button type="button" class="tile" (click)="open.emit({ title: tile.title, content: tile.content, color: tile.color })">
                 <span class="tile-img" [style.background-color]="tile.color">
-                  <img [src]="tile.image" [alt]="tile.imageAlt" loading="lazy" />
+                  <img [src]="tile.image" [alt]="tile.imageAlt" />
                 </span>
                 <span class="tile-body">
                   <span class="tile-title">{{ tile.title }}</span>

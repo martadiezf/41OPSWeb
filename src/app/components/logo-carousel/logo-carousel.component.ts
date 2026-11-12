@@ -105,7 +105,7 @@ interface Logo {
       max-width: none;
       margin: 0;
       overflow: hidden;
-      padding: var(--section-y) 0;
+      padding: 0.5rem 0 var(--section-y);
       /* Fading effect on the edges */
       mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
       -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);

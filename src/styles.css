@@ -101,7 +101,8 @@ app-contact-us,
 }
 
 app-logo-carousel {
-    margin-top: 10rem;
+    display: block;
+    padding-top: var(--section-y);
 }
 
 /* ============================================

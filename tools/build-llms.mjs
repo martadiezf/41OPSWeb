@@ -26,7 +26,7 @@ const list = (items) => items.map((i) => `- ${i}`).join('\n');
 
 const p = t.partStw, a = t.approach;
 const full = [];
-full.push(`# 41OPS: the only training that reaches tech production
+full.push(`# 41OPS: the only training that ends in production
 
 > ${t.hero.description}
 
@@ -57,12 +57,6 @@ ${p.doors.map((d) => `- **${d.title}**: ${d.text}`).join('\n')}
 ${p.modes.map((m) => `- **${m.title}**: ${m.text}`).join('\n')}
 
 ${p.closing}`);
-
-const tr = t.training;
-full.push(`## ${tr.label}: ${tr.title}
-${tr.lead}
-
-${tr.audiences.map((x) => `- **${x.title}** (${x.who.toLowerCase()}): ${x.text}`).join('\n')}`);
 
 full.push(`## ${a.title.replace(/‑/g, '-')}
 ${a.lead}

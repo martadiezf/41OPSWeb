@@ -118,7 +118,7 @@ interface SectionData {
       />
     }
 
-    <app-training id="training" [content]="ts.t().training" [ways]="ts.t().partStw" />
+    <app-training id="ways-in" [ways]="ts.t().partStw" />
 
     <app-approach id="approach" [content]="ts.t().approach" />
 

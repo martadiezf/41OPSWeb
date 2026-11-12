@@ -23,7 +23,7 @@ import { Component, ChangeDetectionStrategy, input, booleanAttribute } from '@an
         </div>
         @if (image()) {
           <div class="band-media">
-            <img [src]="image()" [alt]="imageAlt()" loading="lazy" />
+            <img [src]="image()" [alt]="imageAlt()" />
           </div>
         }
       </div>
