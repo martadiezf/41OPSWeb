@@ -335,6 +335,10 @@ export class SectionsContainerComponent implements OnDestroy {
     private onKey(e: KeyboardEvent) {
         this.hideMobileIndicator();
         if (this.isTransitioning || !this.isHorizontal()) return;
+        // Only steer the carousel while it is the thing on screen; otherwise arrows scroll the page as usual.
+        const r = this.elementRef.nativeElement.getBoundingClientRect();
+        const mid = window.innerHeight / 2;
+        if (r.top > mid || r.bottom < mid) return;
 
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
             e.preventDefault();

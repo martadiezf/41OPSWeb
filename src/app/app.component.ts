@@ -8,7 +8,7 @@ import { LogoCarouselComponent } from './components/logo-carousel/logo-carousel.
 import { NavBarComponent, NavCommand } from './components/nav-bar/nav-bar.component';
 import { PartStwComponent } from './components/part-stw/part-stw.component';
 import { ApproachComponent } from './components/approach/approach.component';
-import { DeeperComponent, DeeperTile } from './components/deeper/deeper.component';
+import { DeeperTile } from './components/deeper/deeper.component';
 import { BandComponent } from './components/band/band.component';
 import { TrainingComponent } from './components/training/training.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
@@ -55,7 +55,6 @@ interface SectionData {
     LogoCarouselComponent,
     PartStwComponent,
     ApproachComponent,
-    DeeperComponent,
     BandComponent,
     TrainingComponent,
 
@@ -163,15 +162,41 @@ interface SectionData {
 
     <app-logo-carousel id="who-trust-us" />
 
-    <app-deeper
-      id="about-us"
-      [label]="ts.t().deeper.label"
-      [title]="ts.t().deeper.title"
-      [lead]="ts.t().deeper.lead"
-      [moreLabel]="ts.t().deeper.moreLabel"
-      [tiles]="deeperTiles()"
-      (open)="openModal($event)"
-    />
+    <section class="deeper-head" id="about-us" aria-labelledby="deeper-title">
+      <p class="bracket-label">{{ ts.t().deeper.label }}</p>
+      <h2 class="deeper-title" id="deeper-title">{{ ts.t().deeper.title }}</h2>
+      <p class="deeper-lead">{{ ts.t().deeper.lead }}</p>
+    </section>
+
+    <!-- Original horizontal carousel: full-width panels, space bar moves to the next one -->
+    <app-sections-container
+      layout="horizontal"
+      viewportHeightVh="85"
+      (sectionChanged)="onSectionChanged($event)"
+      (navigateRequest)="handleNavigateRequest($event)"
+      #deeperContainer
+      id="go-deeper"
+    >
+      @for (section of deeperPanels(); track section.id) {
+        <app-section
+          [id]="section.id"
+          [title]="section.title"
+          [subtitle]="section.subtitle"
+          [backgroundColor]="section.backgroundColor"
+          [navColor]="section.navColor || '#ffffff'"
+          [textColor]="section.textColor || '#ffffff'"
+          [image]="section.image"
+          [hoverImage]="section.hoverImage"
+          [modalContent]="section.modalContent"
+          (requestModal)="openModal($event)"
+          [totalSections]="deeperPanels().length"
+          [sectionIndex]="$index"
+          [globalCurrentSection]="deeperContainer.currentIndex()"
+          (navigate)="deeperContainer.scrollToSection($event)"
+          (nextSection)="deeperContainer.navigateNext()"
+        />
+      }
+    </app-sections-container>
 
     <div class="newsroom-block" id="newsroom">
       <app-newsroom 
@@ -256,6 +281,19 @@ interface SectionData {
       background-color: #f4f1ea;
       overflow-x: clip;
     }
+
+    .deeper-head {
+      padding: var(--section-y) var(--section-x) 2.5rem;
+      max-width: 1180px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      color: #1a1a1a;
+    }
+    .deeper-head .bracket-label { margin-bottom: 1rem; }
+    #go-deeper { display: block; margin-bottom: var(--section-y) !important; }
+    .deeper-title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; line-height: 1.15; margin: 0 0 0.75rem; }
+    .deeper-lead { font-size: 1.1rem; line-height: 1.6; color: #3d3d3d; margin: 0; max-width: 760px; }
 
     .awards-block {
       width: 100%;
@@ -635,6 +673,24 @@ export class AppComponent {
     { color: '#457B9D', image: 'img/casco.png' },
     { color: '#2A9D8F', image: 'img/sections/scaffold_apple_tree.png' },
   ];
+
+  /** Go deeper carousel: the toolkit first, then the three about-us panels. */
+  deeperPanels = computed<SectionData[]>(() => {
+    const t = this.ts.t();
+    return [
+      {
+        id: 1,
+        title: t.deeper.toolkit.title,
+        subtitle: '',
+        backgroundColor: '#000000',
+        navColor: '#ffffff',
+        image: 'img/toolkit/toolkit_messages_41OPS_white.png',
+        hoverImage: 'img/toolkit/toolkit_messages_41OPS_red.png',
+        modalContent: `<img src="img/toolkit/toolkit_messages_41OPS_white.png" alt="${t.deeper.toolkit.teaser}" />`,
+      },
+      ...this.horizontalSectionsNew().map((sec, i) => ({ ...sec, id: i + 2, navColor: '#ffffff' })),
+    ];
+  });
 
   deeperTiles = computed<DeeperTile[]>(() => {
     const t = this.ts.t();
