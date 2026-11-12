@@ -59,7 +59,7 @@ export interface ApproachContent {
 
     <!-- 2 · M1 -->
     <app-band
-      color="#E85D04" ink="#1a1a1a" reverse
+      color="#E85D04" ink="#1a1a1a" bracketColor="#1a1a1a" reverse
       image="img/sections/sticker_bot_head_jaime_AGI.png"
       [imageAlt]="c().m1Title"
       [label]="c().m1Label" [title]="c().m1Title" [text]="c().m1Text"

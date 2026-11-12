@@ -16,7 +16,7 @@ export interface DeeperTile {
     template: `
     <section class="deeper" aria-labelledby="deeper-title">
       <div class="deeper-inner">
-        <p class="deeper-label">{{ label() }}</p>
+        <p class="bracket-label">{{ label() }}</p>
         <h2 class="deeper-title" id="deeper-title">{{ title() }}</h2>
         <p class="deeper-lead">{{ lead() }}</p>
         <ul class="tiles">
@@ -42,7 +42,7 @@ export interface DeeperTile {
     :host { display: block; width: 100%; scroll-snap-align: start; }
     .deeper { background: #F3F1E7; color: #1a1a1a; padding: var(--section-y) var(--section-x); display: flex; justify-content: center; font-family: 'Inter', sans-serif; }
     .deeper-inner { width: 100%; max-width: 1180px; }
-    .deeper-label { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.35rem; letter-spacing: 0.08em; color: var(--color-1, #E85D04); margin: 0 0 0.5rem; }
+    .deeper .bracket-label { margin-bottom: 1rem; }
     .deeper-title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; line-height: 1.15; margin: 0 0 0.75rem; }
     .deeper-lead { font-size: 1.1rem; line-height: 1.6; color: #3d3d3d; margin: 0 0 2.5rem; max-width: 760px; }
     .tiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }

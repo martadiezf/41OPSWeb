@@ -53,16 +53,6 @@
     text-align: center;
 }
 
-.stw-label {
-    font-family: 'Bebas Neue', Impact, sans-serif;
-    font-size: 1.35rem;
-    letter-spacing: 0.08em;
-    color: var(--color-1, #E85D04);
-    margin: 0 0 1.25rem;
-}
-
-.stw-label-center { text-align: center; }
-
 /* Idea to company */
 .pipeline {
     list-style: none;
@@ -145,12 +135,6 @@
 }
 
 /* Lead-in to the three step bands */
-.steps-intro .stw-label {
-    font-size: clamp(2rem, 3.6vw, 2.8rem);
-    color: #1a1a1a;
-    margin-bottom: 0.5rem;
-}
-
 .steps-note {
     font-size: 1.05rem;
     font-style: italic;

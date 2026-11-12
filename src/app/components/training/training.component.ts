@@ -25,7 +25,7 @@ export interface WaysContent {
     <section class="tr" aria-labelledby="training-title">
       <div class="tr-inner">
         <div class="block head">
-          <p class="tr-label">{{ c().label }}</p>
+          <p class="bracket-label">{{ c().label }}</p>
           <h2 class="tr-title" id="training-title">{{ c().title }}</h2>
           <p class="tr-lead">{{ c().lead }}</p>
         </div>
@@ -41,7 +41,7 @@ export interface WaysContent {
         </ul>
 
         <div class="block">
-          <p class="tr-label">{{ w().doorsLabel }}</p>
+          <p class="bracket-label">{{ w().doorsLabel }}</p>
           <div class="doors">
             @for (door of w().doors; track door.title) {
               <div class="door">
@@ -53,7 +53,7 @@ export interface WaysContent {
         </div>
 
         <div class="block">
-          <p class="tr-label">{{ w().modesLabel }}</p>
+          <p class="bracket-label">{{ w().modesLabel }}</p>
           <div class="modes">
             @for (mode of w().modes; track mode.title) {
               <div class="mode">
@@ -77,8 +77,7 @@ export interface WaysContent {
     .tr { background: #F3F1E7; color: #1a1a1a; padding: var(--section-y) var(--section-x); display: flex; justify-content: center; font-family: 'Inter', sans-serif; }
     .tr-inner { width: 100%; max-width: 1080px; display: flex; flex-direction: column; gap: var(--block-gap); }
     .block { display: flex; flex-direction: column; }
-    .tr-label { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.35rem; letter-spacing: 0.08em; color: var(--color-1, #E85D04); margin: 0 0 1.25rem; }
-    .head .tr-label { margin-bottom: 0.5rem; }
+    .head .bracket-label { margin-bottom: 1rem; }
     .tr-title { font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: clamp(2.8rem, 6vw, 4.6rem); line-height: 0.95; margin: 0 0 1rem; }
     .tr-lead { font-size: 1.2rem; line-height: 1.6; color: #3d3d3d; margin: 0; max-width: 780px; }
 

@@ -148,3 +148,29 @@ app-logo-carousel {
         --block-gap: 36px;
     }
 }
+
+/* Etiqueta de sección con corchetes: [ TÍTULO ] — mismo formato que Highlights y Brands */
+.bracket-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "PP Supply Mono Regular", "PP Supply Mono Regular Placeholder", monospace;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--bracket-text, rgba(0, 0, 0, 0.5));
+    margin: 0 0 1.25rem;
+}
+
+.bracket-label::before,
+.bracket-label::after {
+    font-weight: 800;
+    color: var(--bracket-color, var(--color-1, #E85D04));
+}
+
+.bracket-label::before { content: '['; }
+.bracket-label::after { content: ']'; }
+
+.bracket-label.center { align-self: center; }

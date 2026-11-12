@@ -4,7 +4,7 @@
         <p class="stw-lead">{{ content().lead }}</p>
 
         <div class="block">
-            <p class="stw-label stw-label-center">{{ content().pipelineLabel }}</p>
+            <p class="bracket-label center">{{ content().pipelineLabel }}</p>
             <ol class="pipeline">
                 @for (p of content().pipeline; track p.title; let i = $index) {
                     <li class="pipe">
@@ -28,7 +28,7 @@
         </div>
 
         <div class="block steps-intro">
-            <p class="stw-label stw-label-center">{{ content().stepsLabel }}</p>
+            <p class="bracket-label center">{{ content().stepsLabel }}</p>
             <p class="steps-note">{{ content().stepsNote }}</p>
         </div>
     </div>

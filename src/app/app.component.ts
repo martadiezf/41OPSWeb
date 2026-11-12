@@ -107,6 +107,7 @@ interface SectionData {
       <app-band
         [color]="stepBands[i].color"
         ink="#FFFFFF"
+        bracketColor="#FFFFFF"
         [image]="stepBands[i].image"
         [imageAlt]="step.title"
         [label]="step.number + ' · ' + step.tag"
