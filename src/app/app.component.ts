@@ -365,6 +365,19 @@ interface SectionData {
         padding-right: 0.5rem;
     }
     
+    ::ng-deep .modal-body img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 8px;
+    }
+
+    /* Image-only pop-ups (the toolkit diagram) get a wider window so its small text stays legible. */
+    .modal-container:has(.modal-body > img:only-child) {
+        max-width: min(1240px, 95vw);
+    }
+
     ::ng-deep .modal-body ul,
     ::ng-deep .modal-body ol {
         padding-left: 2rem;
@@ -632,7 +645,7 @@ export class AppComponent {
       image: 'img/toolkit/toolkit_messages_41OPS_white.png',
       imageAlt: t.deeper.toolkit.teaser,
       color: '#000000',
-      content: `<img src="img/toolkit/toolkit_messages_41OPS_white.png" alt="${t.deeper.toolkit.teaser}" style="width:100%;height:auto;border-radius:8px" />`,
+      content: `<img src="img/toolkit/toolkit_messages_41OPS_white.png" alt="${t.deeper.toolkit.teaser}" />`,
     }];
     about.forEach((sec, i) => tiles.push({
       title: sec.title,
