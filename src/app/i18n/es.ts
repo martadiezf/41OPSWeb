@@ -13,7 +13,7 @@ export const ES: Translations = {
     hero: {
         title: 'La única formación que llega a producción',
         subtitle: '41OPS',
-        description: '41OPS es la única empresa de formación que llega a producción tecnológica: Formación → Preproducción → Producción. Arquitecturas Extendidas de Producción (EPAs) para maximizar la eficiencia de la IA.',
+        description: '41OPS es la única empresa de formación que llega a producción tecnológica: Formación → Preproducción → Producción. Arquitecturas Extendidas de Producción (EPAs) ligeras sobre tus sistemas heredados para consumir IA de forma eficiente.',
     },
     partStw: {
         titleHtml: 'Parte de <u>SciTheWorld</u>',

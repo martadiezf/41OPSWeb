@@ -13,7 +13,7 @@ export const EN: Translations = {
     hero: {
         title: 'The only training that reaches production',
         subtitle: '41OPS',
-        description: '41OPS is the only training company that reaches tech production: Train → Pre-prod → Prod. Extended Production Architectures (EPAs) to consume AI efficiently.',
+        description: '41OPS is the only training company that reaches tech production: Train → Pre-prod → Prod. Light Extended Production Architectures (EPAs) upon your legacy to consume AI efficiently.',
     },
     partStw: {
         titleHtml: 'Part of <u>SciTheWorld</u>',
