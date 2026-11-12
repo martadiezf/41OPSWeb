@@ -28,6 +28,7 @@ export const EN: Translations = {
             { title: 'Product or company', text: 'On our platforms, or a new company.' },
         ],
         pipelineNote: 'Our D does not stop at a proof of concept: it ends in a final product or a new company. That is an unbeatable D. And every product and company we create grows SciTheWorld\'s conglomerate.',
+        bridge: 'Having built products and companies across state-of-the-art challenges, we see the whole picture of a client\'s spaghetti map of systems, processes and teams, and where to start untangling it.',
         intro: 'We help clients put order into their transformation challenges through laser-focused training: the overall picture of AI Ops (new working protocols), the tech enablers, the ML involved, and the risk of each.',
         stepsLabel: 'What no other trainer can do',
         steps: [
@@ -87,10 +88,22 @@ export const EN: Translations = {
             'The factory of algorithmic use cases, on Fractal and Alpha Dynamics.',
         ],
     },
-    stealth: {
-        label: 'Stealth mode',
-        title: 'Our edge stays private',
-        text: 'We have recently started to operate in stealth mode. Having built a strong brand in the open, we now do what the best hedge funds do. While most providers move towards openness, we protect intellectual property: our own, and that of the few we work with. That means selected clients who can become partners and, above all, the companies in SciTheWorld\'s portfolio of spin-offs.',
+    training: {
+        label: 'Our training',
+        title: 'Training that ends in production',
+        lead: 'Laser-focused programmes, built on the bleeding edge published at algorithmization.com and run on your own challenges. Formats and length are tailored to each client.',
+        audiences: [
+            { who: 'Boards', title: 'Board Programme', text: 'In person, with SciTheWorld\'s co-founders. For boards that need criteria, not a certificate.' },
+            { who: 'Executives and managers', title: 'CALM', text: 'A ranked transformation agenda, insights and targeted training, so everyone shares the same picture before investing.' },
+            { who: 'Teams', title: 'Back to the Future', text: 'Try before you buy: learn the limits by doing, on your own challenges, and leave with your own artifact.' },
+        ],
+        cta: 'Ask for the programme',
+        ctaNote: 'Tell us your challenge and we come back with a proposal.',
+    },
+    edge: {
+        label: 'Confidential by design',
+        title: 'Your edge stays yours',
+        text: 'We teach openly; what you build with us stays private. Your artifacts, data and know-how are protected by design: federated, compartmentalised and yours to keep.',
     },
     seo: {
         title: '41OPS | The only training that reaches tech production',
@@ -314,13 +327,14 @@ Data MAPs Algorithmization requires an optimal weighting between business and te
           <li>Customized: departamental EPA upon the company’s legacy.</li>
           <li>Organic operating system: not forced but, on the contrary, as a byproduct from the departamental, bottom-up transformation. Thereon, all sorts of hybrid decisions, across departments, can be taken in real time.</li>
         </ol>
-        <p>To the best of our knowledge, we are not only the pioneers of this corporate-friendly methodology but also, the only ones who can deliver it.</p>
+        <p>To the best of our knowledge, we are not only the pioneers of this corporate-friendly methodology but also the only ones who can teach it and take it to production.</p>
       `,
         },
         {
             title: 'Behind-the-scenes',
             modalContent: `
-        <p>Our laser-focus is the Machine in Machine Learning (more particularly, the M2 in ML).</p>
+        <p>This is what makes pre-production and production possible after the training.</p>
+        <p>Our laser-focus is the Machine in Machine Learning: M1, novel models built for each problem, and M2, the machine that governs them.</p>
         <p>Our product can be understood as the factory of algorithmic use cases. Or, else:</p>
         <ol>
           <li>The scaffolding (the factory) surrounding a tree so that the sticks (the use cases) can reach not only low-hanging fruits (the impact) but any fruit at ease.</li>
@@ -775,7 +789,7 @@ Data MAPs Algorithmization requires an optimal weighting between business and te
                 extraSkills: ['Django', 'D3.js', 'Angular', 'RabbitMQ/Kafka', 'ML'],
                 description: `
 <h3>About the role</h3>
-<p>We are looking for a junior or mid-level candidate to join the SciTheWorld group through its technology consulting arm: 41OPS.</p>
+<p>We are looking for a junior or mid-level candidate to join the SciTheWorld group through 41OPS, the only training company that reaches tech production.</p>
 
 <h3>What you need</h3>
 <ul>

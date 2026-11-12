@@ -28,6 +28,7 @@ export const ES: Translations = {
             { title: 'Producto o empresa', text: 'Sobre nuestras plataformas, o una nueva empresa.' },
         ],
         pipelineNote: 'Nuestro D no se queda en una prueba de concepto: termina en un producto final o en una nueva empresa. Es un D imbatible. Y cada producto y empresa que creamos hace crecer el conglomerado de SciTheWorld.',
+        bridge: 'Tras crear productos y empresas en retos de vanguardia, vemos la foto completa de la maraña de sistemas, procesos y equipos de cada cliente, y por dónde empezar a desenredarla.',
         intro: 'Ayudamos a nuestros clientes a poner orden en sus retos de transformación mediante formación muy focalizada: la visión global de AI Ops (nuevos protocolos de trabajo), los habilitadores tecnológicos, el ML implicado y el riesgo de cada uno.',
         stepsLabel: 'Lo que ningún otro formador puede hacer',
         steps: [
@@ -87,10 +88,22 @@ export const ES: Translations = {
             'La fábrica de casos de uso algorítmicos, sobre Fractal y Alpha Dynamics.',
         ],
     },
-    stealth: {
-        label: 'Modo sigilo',
-        title: 'Nuestra ventaja, en privado',
-        text: 'Hemos empezado recientemente a operar en modo sigilo. Tras construir una marca sólida a la vista de todos, ahora hacemos lo que hacen los mejores hedge funds. Mientras la mayoría de los proveedores apuestan por la apertura, nosotros protegemos la propiedad intelectual: la nuestra y la de quienes trabajan con nosotros. Es decir, clientes seleccionados que pueden convertirse en socios y, sobre todo, las empresas de la cartera de spin-offs de SciTheWorld.',
+    training: {
+        label: 'Nuestra formación',
+        title: 'Formación que termina en producción',
+        lead: 'Programas muy focalizados, basados en la vanguardia publicada en algorithmization.com y aplicados a tus propios retos. El formato y la duración se adaptan a cada cliente.',
+        audiences: [
+            { who: 'Consejos', title: 'Board Programme', text: 'Presencial, con los cofundadores de SciTheWorld. Para consejos que necesitan criterio, no un certificado.' },
+            { who: 'Directivos y mandos', title: 'CALM', text: 'Una agenda de transformación priorizada, insights y formación focalizada, para que todos compartan la misma visión antes de invertir.' },
+            { who: 'Equipos', title: 'Back to the Future', text: 'Prueba antes de comprar: aprende los límites haciendo, sobre tus propios retos, y llévate tu propio artefacto.' },
+        ],
+        cta: 'Pide el programa',
+        ctaNote: 'Cuéntanos tu reto y volvemos con una propuesta.',
+    },
+    edge: {
+        label: 'Confidencial por diseño',
+        title: 'Tu ventaja sigue siendo tuya',
+        text: 'Enseñamos abiertamente; lo que construyes con nosotros sigue siendo privado. Tus artefactos, tus datos y tu know-how están protegidos por diseño: federados, compartimentados y siempre tuyos.',
     },
     seo: {
         title: '41OPS | La única formación que llega a producción',
@@ -318,12 +331,13 @@ Data MAPs Algorithmization requires an optimal weighting between business and te
     <li><strong>Sistema operativo orgánico:</strong> no se impone desde arriba; al contrario, surge como resultado natural de esta transformación departamental ascendente. A partir de ahí, permite tomar todo tipo de decisiones híbridas e interdepartamentales en tiempo real.</li>
 </ol>
 
-<p>Hasta donde sabemos, no solo somos los pioneros de esta metodología adaptada al ecosistema corporativo, sino también los únicos capaces de ejecutarla.</p>`,
+<p>Hasta donde sabemos, no solo somos los pioneros de esta metodología adaptada al ecosistema corporativo, sino también los únicos capaces de enseñarla y llevarla a producción.</p>`,
         },
         {
             title: 'Entre bastidores',
             modalContent: `
-<p>Nuestro enfoque absoluto es la Máquina dentro del <em>Machine Learning</em> (más concretamente, la M2 en el ML).</p>
+<p>Esto es lo que hace posibles la preproducción y la producción después de la formación.</p>
+<p>Nuestro enfoque absoluto es la Máquina dentro del <em>Machine Learning</em>: M1, modelos nuevos creados para cada problema, y M2, la máquina que los gobierna.</p>
 
 <p>Nuestro producto puede entenderse como la fábrica de casos de uso algorítmicos. O, dicho de otro modo:</p>
 
@@ -790,7 +804,7 @@ Data MAPs Algorithmization requires an optimal weighting between business and te
                 extraSkills: ['Django', 'D3.js', 'Angular', 'RabbitMQ/Kafka', 'ML', 'Econometrics'],
                 description: `
 <h3>Sobre el puesto</h3>
-<p>Buscamos candidato junior o mid para unirse al grupo SciTheWorld a través de su brazo de consultoría tecnológica: 41OPS.</p>
+<p>Buscamos candidato junior o mid para unirse al grupo SciTheWorld a través de 41OPS, la única empresa de formación que llega a producción tecnológica.</p>
 
 <h3>Lo que necesitas</h3>
 <ul>

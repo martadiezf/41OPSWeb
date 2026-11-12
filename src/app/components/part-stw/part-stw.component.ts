@@ -6,6 +6,7 @@ export interface PartStwContent {
     pipelineLabel: string;
     pipeline: Array<{ title: string; text: string }>;
     pipelineNote: string;
+    bridge: string;
     intro: string;
     stepsLabel: string;
     steps: Array<{ number: string; title: string; tag: string; text: string }>;

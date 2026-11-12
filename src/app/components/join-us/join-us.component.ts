@@ -120,7 +120,7 @@ export interface JobOffer {
        HERO SECTION
        ═══════════════════════════════════════════════════════ */
     .hero-section {
-      padding: 6rem 5% 4rem 5%;
+      padding: var(--section-y) var(--section-x);
       border-bottom: 1px solid rgba(232, 93, 4, 0.3);
       position: relative;
       overflow: hidden;
@@ -512,7 +512,7 @@ export interface JobOffer {
        ═══════════════════════════════════════════════════════ */
     @media (max-width: 900px) {
       .hero-section {
-        padding: 4rem 1.5rem 3rem 1.5rem;
+        padding: var(--section-y) var(--section-x);
       }
 
       .hero-title {

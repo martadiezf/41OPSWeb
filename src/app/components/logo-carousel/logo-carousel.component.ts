@@ -103,9 +103,9 @@ interface Logo {
       position: relative;
       width: 100%;
       max-width: none;
-      margin: 2rem 0;
+      margin: 0;
       overflow: hidden;
-      padding: 2rem 0;
+      padding: var(--section-y) 0;
       /* Fading effect on the edges */
       mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
       -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);

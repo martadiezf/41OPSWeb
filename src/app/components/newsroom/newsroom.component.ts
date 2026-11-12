@@ -121,7 +121,7 @@ export interface NewsItem {
       width: 100%;
       max-width: 100vw;
       overflow-x: hidden;
-      padding: 4rem 5% 7rem 5%;
+      padding: var(--section-y) var(--section-x);
       font-family: 'Inter', sans-serif;
       color: #222;
       background-color: transparent;
@@ -432,7 +432,7 @@ export interface NewsItem {
 
     @media (max-width: 768px) {
       :host {
-        padding: 2rem 1rem 4rem 1rem;
+        padding: var(--section-y) var(--section-x);
       }
 
       .newsroom-title {

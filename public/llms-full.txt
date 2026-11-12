@@ -22,6 +22,8 @@ Our D does not stop at a proof of concept: it ends in a final product or a new c
 ---
 
 ## What 41OPS does
+Having built products and companies across state-of-the-art challenges, we see the whole picture of a client's spaghetti map of systems, processes and teams, and where to start untangling it.
+
 We help clients put order into their transformation challenges through laser-focused training: the overall picture of AI Ops (new working protocols), the tech enablers, the ML involved, and the risk of each.
 
 ### What no other trainer can do
@@ -40,6 +42,17 @@ Each step happens only if the previous one leads there.
 - **Bottom-up**: Your tech consultancy, but delivering custom SaaS instead of old-school projects.
 
 Then you can interconnect those projects within your company (departments and legacy systems, up to your own algo-native OS) or with partners (unlocking trust through novel auditability).
+
+---
+
+## Our training: Training that ends in production
+Laser-focused programmes, built on the bleeding edge published at algorithmization.com and run on your own challenges. Formats and length are tailored to each client.
+
+- **Board Programme** (boards): In person, with SciTheWorld's co-founders. For boards that need criteria, not a certificate.
+- **CALM** (executives and managers): A ranked transformation agenda, insights and targeted training, so everyone shares the same picture before investing.
+- **Back to the Future** (teams): Try before you buy: learn the limits by doing, on your own challenges, and leave with your own artifact.
+
+Ask for the programme: hello@41ops.com. Tell us your challenge and we come back with a proposal.
 
 ---
 
@@ -159,10 +172,12 @@ We are uniquely positioned to deliver Transformation Bubbles towards the unlocki
 
 - Organic operating system: not forced but, on the contrary, as a byproduct from the departamental, bottom-up transformation. Thereon, all sorts of hybrid decisions, across departments, can be taken in real time.
 
-        To the best of our knowledge, we are not only the pioneers of this corporate-friendly methodology but also, the only ones who can deliver it.
+        To the best of our knowledge, we are not only the pioneers of this corporate-friendly methodology but also the only ones who can teach it and take it to production.
 
 ### Behind-the-scenes
-Our laser-focus is the Machine in Machine Learning (more particularly, the M2 in ML).
+This is what makes pre-production and production possible after the training.
+
+        Our laser-focus is the Machine in Machine Learning: M1, novel models built for each problem, and M2, the machine that governs them.
 
         Our product can be understood as the factory of algorithmic use cases. Or, else:
 
@@ -580,8 +595,8 @@ This triad ensures that our delivery remains technically sound, economically coh
 
 ---
 
-## Stealth mode
-We have recently started to operate in stealth mode. Having built a strong brand in the open, we now do what the best hedge funds do. While most providers move towards openness, we protect intellectual property: our own, and that of the few we work with. That means selected clients who can become partners and, above all, the companies in SciTheWorld's portfolio of spin-offs.
+## Your edge stays yours
+We teach openly; what you build with us stays private. Your artifacts, data and know-how are protected by design: federated, compartmentalised and yours to keep.
 
 ---
 
@@ -595,7 +610,7 @@ We also aim to grow more in tech than in people. Our main KPI is: **tech/persona
 ### Data Engineer (Madrid, Spain)
 #### About the role
 
-We are looking for a junior or mid-level candidate to join the SciTheWorld group through its technology consulting arm: 41OPS.
+We are looking for a junior or mid-level candidate to join the SciTheWorld group through 41OPS, the only training company that reaches tech production.
 
 #### What you need
 

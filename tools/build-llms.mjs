@@ -41,6 +41,8 @@ ${p.pipeline.map((s, i) => `${i + 1}. **${s.title}**: ${s.text}`).join('\n')}
 ${p.pipelineNote}`);
 
 full.push(`## What 41OPS does
+${p.bridge}
+
 ${p.intro}
 
 ### ${p.stepsLabel}
@@ -55,6 +57,14 @@ ${p.doors.map((d) => `- **${d.title}**: ${d.text}`).join('\n')}
 ${p.modes.map((m) => `- **${m.title}**: ${m.text}`).join('\n')}
 
 ${p.closing}`);
+
+const tr = t.training;
+full.push(`## ${tr.label}: ${tr.title}
+${tr.lead}
+
+${tr.audiences.map((x) => `- **${x.title}** (${x.who.toLowerCase()}): ${x.text}`).join('\n')}
+
+${tr.cta}: hello@41ops.com. ${tr.ctaNote}`);
 
 full.push(`## ${a.title.replace(/‑/g, '-')}
 ${a.lead}
@@ -116,8 +126,8 @@ ${t.awards.items.map((x) => `- **${x.name}** (${x.category.toLowerCase()}): ${x.
 full.push(`## ${t.newsroom.title}
 ${t.newsroom.items.map((n) => `- **${n.date} · ${n.company} · ${n.title}**: ${n.summary}${n.howAiSeesUs ? ` ([read](${n.howAiSeesUs}))` : ''}`).join('\n')}`);
 
-full.push(`## ${t.stealth.label}
-${t.stealth.text}`);
+full.push(`## ${t.edge.title}
+${t.edge.text}`);
 
 full.push(`## Join us
 ${md(t.joinUs.description)}

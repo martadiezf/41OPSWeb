@@ -40,7 +40,7 @@ export interface DeeperTile {
   `,
     styles: [`
     :host { display: block; width: 100%; scroll-snap-align: start; }
-    .deeper { background: #F3F1E7; color: #1a1a1a; padding: 88px 5% 96px; display: flex; justify-content: center; font-family: 'Inter', sans-serif; }
+    .deeper { background: #F3F1E7; color: #1a1a1a; padding: var(--section-y) var(--section-x); display: flex; justify-content: center; font-family: 'Inter', sans-serif; }
     .deeper-inner { width: 100%; max-width: 1180px; }
     .deeper-label { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.35rem; letter-spacing: 0.08em; color: var(--color-1, #E85D04); margin: 0 0 0.5rem; }
     .deeper-title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; line-height: 1.15; margin: 0 0 0.75rem; }
@@ -56,7 +56,7 @@ export interface DeeperTile {
     .tile-teaser { font-size: 0.92rem; line-height: 1.5; color: #4a4a4a; flex: 1; }
     .tile-more { font-size: 0.85rem; font-weight: 600; color: var(--color-1, #E85D04); margin-top: 0.4rem; }
     @media (max-width: 1100px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 700px) { .deeper { padding: 72px 6% 80px; } .tiles { grid-template-columns: minmax(0, 1fr); } .tile { flex-direction: row; } .tile-img { width: 110px; height: auto; flex: none; } }
+    @media (max-width: 700px) { .tiles { grid-template-columns: minmax(0, 1fr); } .tile { flex-direction: row; } .tile-img { width: 110px; height: auto; flex: none; } }
   `],
 })
 export class DeeperComponent {

@@ -14,6 +14,11 @@
     --color-5: #3b19b4;
     /* Morado Profundo */
 
+    /* Ritmo vertical: misma distancia en todas las secciones */
+    --section-y: 96px;
+    --section-x: 5%;
+    --block-gap: 48px;
+
     /* Tipografía */
     --font-heading: 'Bebas Neue', 'Impact', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -134,4 +139,12 @@ app-logo-carousel {
 .scroll-card-description a:hover {
     color: #ffffff;
     opacity: 1;
+}
+/* Ritmo vertical en móvil */
+@media (max-width: 900px) {
+    :root {
+        --section-y: 72px;
+        --section-x: 6%;
+        --block-gap: 36px;
+    }
 }

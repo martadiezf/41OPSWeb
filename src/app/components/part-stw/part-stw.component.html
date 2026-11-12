@@ -3,51 +3,33 @@
         <h2 class="stw-title" id="part-of-scitheworld" [innerHTML]="content().titleHtml"></h2>
         <p class="stw-lead">{{ content().lead }}</p>
 
-        <p class="stw-label stw-label-center">{{ content().pipelineLabel }}</p>
-        <ol class="pipeline">
-            @for (p of content().pipeline; track p.title; let i = $index) {
-                <li class="pipe">
-                    <span class="pipe-n">{{ i + 1 }}</span>
-                    <span class="pipe-title">{{ p.title }}</span>
-                    <span class="pipe-text">{{ p.text }}</span>
-                </li>
-            }
-        </ol>
-        <p class="pipeline-note">{{ content().pipelineNote }}</p>
-        <p class="stw-intro">{{ content().intro }}</p>
-
-        <p class="stw-label">{{ content().stepsLabel }}</p>
-        <ol class="steps">
-            @for (step of content().steps; track step.number) {
-                <li class="step">
-                    <span class="step-number">{{ step.number }}</span>
-                    <h3 class="step-title">{{ step.title }}</h3>
-                    <span class="step-tag">{{ step.tag }}</span>
-                    <p class="step-text">{{ step.text }}</p>
-                </li>
-            }
-        </ol>
-        <p class="steps-note">{{ content().stepsNote }}</p>
-
-        <p class="stw-label">{{ content().doorsLabel }}</p>
-        <div class="doors">
-            @for (door of content().doors; track door.title) {
-                <div class="door">
-                    <h3 class="door-title">{{ door.title }}</h3>
-                    <p class="door-text">{{ door.text }}</p>
-                </div>
-            }
+        <div class="block">
+            <p class="stw-label stw-label-center">{{ content().pipelineLabel }}</p>
+            <ol class="pipeline">
+                @for (p of content().pipeline; track p.title; let i = $index) {
+                    <li class="pipe">
+                        <span class="pipe-n">{{ i + 1 }}</span>
+                        <span class="pipe-title">{{ p.title }}</span>
+                        <span class="pipe-text">{{ p.text }}</span>
+                    </li>
+                }
+            </ol>
         </div>
 
-        <p class="stw-label">{{ content().modesLabel }}</p>
-        <div class="modes">
-            @for (mode of content().modes; track mode.title) {
-                <div class="mode">
-                    <h3 class="mode-title">{{ mode.title }}</h3>
-                    <p class="mode-text">{{ mode.text }}</p>
-                </div>
-            }
+        <div class="block conglomerate">
+            <img class="conglomerate-img" src="img/Extreme-Efficient_group.png"
+                 [alt]="content().pipelineNote" loading="lazy" />
+            <p class="conglomerate-note">{{ content().pipelineNote }}</p>
         </div>
-        <p class="stw-closing">{{ content().closing }}</p>
+
+        <div class="block">
+            <p class="stw-bridge">{{ content().bridge }}</p>
+            <p class="stw-intro">{{ content().intro }}</p>
+        </div>
+
+        <div class="block steps-intro">
+            <p class="stw-label stw-label-center">{{ content().stepsLabel }}</p>
+            <p class="steps-note">{{ content().stepsNote }}</p>
+        </div>
     </div>
 </section>

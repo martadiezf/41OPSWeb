@@ -19,6 +19,7 @@ export interface Translations {
         pipelineLabel: string;
         pipeline: Array<{ title: string; text: string }>;
         pipelineNote: string;
+        bridge: string;
         intro: string;
         stepsLabel: string;
         steps: Array<{ number: string; title: string; tag: string; text: string }>;
@@ -37,7 +38,15 @@ export interface Translations {
         toolkit: { title: string; teaser: string };
         teasers: string[];
     };
-    stealth: {
+    training: {
+        label: string;
+        title: string;
+        lead: string;
+        audiences: Array<{ who: string; title: string; text: string }>;
+        cta: string;
+        ctaNote: string;
+    };
+    edge: {
         label: string;
         title: string;
         text: string;

@@ -9,7 +9,8 @@ import { NavBarComponent, NavCommand } from './components/nav-bar/nav-bar.compon
 import { PartStwComponent } from './components/part-stw/part-stw.component';
 import { ApproachComponent } from './components/approach/approach.component';
 import { DeeperComponent, DeeperTile } from './components/deeper/deeper.component';
-import { StealthComponent } from './components/stealth/stealth.component';
+import { BandComponent } from './components/band/band.component';
+import { TrainingComponent } from './components/training/training.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
 import { CursorFollowerComponent } from './components/cursor-follower/cursor-follower.component';
 import { PapersListComponent, Paper } from './components/papers-list/papers-list.component';
@@ -55,7 +56,8 @@ interface SectionData {
     PartStwComponent,
     ApproachComponent,
     DeeperComponent,
-    StealthComponent,
+    BandComponent,
+    TrainingComponent,
 
     PreloaderComponent,
     CursorFollowerComponent,
@@ -101,6 +103,22 @@ interface SectionData {
 
     <app-part-stw [content]="ts.t().partStw" />
 
+    @for (step of ts.t().partStw.steps; track step.number; let i = $index) {
+      <app-band
+        [color]="stepBands[i].color"
+        ink="#FFFFFF"
+        [image]="stepBands[i].image"
+        [imageAlt]="step.title"
+        [label]="step.number + ' · ' + step.tag"
+        [title]="step.title"
+        [text]="step.text"
+        [level]="3"
+        [reverse]="i % 2 === 1"
+      />
+    }
+
+    <app-training id="training" [content]="ts.t().training" [ways]="ts.t().partStw" />
+
     <app-approach id="approach" [content]="ts.t().approach" />
 
     <app-accordion
@@ -141,38 +159,6 @@ interface SectionData {
       <app-awards-list />
     </div>
 
-    <!-- NEW: Vertical container for unbeatable -->
-    <app-sections-container
-      layout="vertical"
-      viewportHeightVh="85"
-      (sectionChanged)="onSectionChanged($event)"
-      (navigateRequest)="handleNavigateRequest($event)"
-      #verticalContainerUnbeatable
-      id="unbeatable-container"
-    >
-      @for (section of verticalSectionsUnbeatable(); track section.id) {
-        <app-section
-          [id]="section.id"
-          [title]="section.title"
-          [subtitle]="section.subtitle"
-          [backgroundColor]="section.backgroundColor"
-          [navColor]="section.navColor || '#000000'"
-          [textColor]="section.textColor || '#ffffff'"
-          [image]="section.image"
-          [modalContent]="section.modalContent"
-          (requestModal)="openModal($event)"
-          [totalSections]="verticalSectionsUnbeatable().length"
-          [sectionIndex]="$index"
-          [globalCurrentSection]="verticalContainerUnbeatable.currentIndex()"
-          (navigate)="verticalContainerUnbeatable.scrollToSection($event)"
-          (nextSection)="verticalContainerUnbeatable.navigateNext()"
-        >
-          @if (section.customContent) {
-            <div [innerHTML]="section.customContent" class="section-custom-content"></div>
-          }
-        </app-section>
-      }
-    </app-sections-container>
 
     <app-logo-carousel id="who-trust-us" />
 
@@ -205,11 +191,15 @@ interface SectionData {
       />
     </div>
 
-    <app-stealth
-      id="stealth"
-      [label]="ts.t().stealth.label"
-      [title]="ts.t().stealth.title"
-      [text]="ts.t().stealth.text"
+    <app-band
+      id="your-edge"
+      color="#1a1a1a"
+      ink="#F3F1E7"
+      image="img/peluca.png"
+      [imageAlt]="ts.t().edge.title"
+      [label]="ts.t().edge.label"
+      [title]="ts.t().edge.title"
+      [text]="ts.t().edge.text"
     />
 
     <app-contact-us id="contact" />
@@ -268,7 +258,7 @@ interface SectionData {
 
     .awards-block {
       width: 100%;
-      padding: 4rem 0;
+      padding: 0;
       scroll-snap-align: start;
     }
 
@@ -625,6 +615,12 @@ export class AppComponent {
       modalContent: this.ts.t().aboutUsHorizontal[2].modalContent
     }
   ]);
+
+  readonly stepBands = [
+    { color: '#E63946', image: 'img/birrete.png' },
+    { color: '#457B9D', image: 'img/casco.png' },
+    { color: '#2A9D8F', image: 'img/sections/scaffold_apple_tree.png' },
+  ];
 
   deeperTiles = computed<DeeperTile[]>(() => {
     const t = this.ts.t();

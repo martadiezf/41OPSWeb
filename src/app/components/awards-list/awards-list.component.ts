@@ -35,7 +35,7 @@ interface Award {
       display: block;
       width: 100%;
       height: 100%;
-      padding: 4rem 5%; /* Match sections left padding */
+      padding: var(--section-y) var(--section-x); /* Same rhythm as every section */
       color: var(--text-muted);
       font-family: 'Inter', sans-serif;
       display: flex;
@@ -106,7 +106,7 @@ interface Award {
 
     @media (max-width: 1024px) {
       :host {
-        padding: 4rem 5%;
+        padding: var(--section-y) var(--section-x);
       }
       
       .title {
