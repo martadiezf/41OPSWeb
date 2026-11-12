@@ -144,7 +144,7 @@ ${p.lead} ${p.intro}
 - [Home](${SITE}/): positioning, how we work, highlights, awards, partners, newsroom and contact.
 
 ## The group
-- [SciTheWorld](https://scitheworld.com): boutique family business in state-of-the-art investing; a conglomerate built on its own R&D.
+- [SciTheWorld](https://scitheworld.com): family business in state-of-the-art investing; a conglomerate built on its own R&D.
 - [Algorithmization](https://algorithmization.com): the R. Research centre and timestamped papers.
 - [SystematicMe](https://systematicme.com)
 - [Learning~Adaptive](https://learningadaptive.com)

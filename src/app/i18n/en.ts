@@ -17,7 +17,7 @@ export const EN: Translations = {
     },
     partStw: {
         titleHtml: 'Part of <u>SciTheWorld</u>',
-        lead: 'SciTheWorld is a boutique family business in state-of-the-art investing: not a fund, a conglomerate built on its own R&D. Algorithmization is the R. 41OPS is the D.',
+        lead: 'SciTheWorld is a family business in state-of-the-art investing: not a fund, a conglomerate built on its own R&D. Algorithmization is the R. 41OPS is the D.',
         pipelineLabel: 'From idea to company',
         pipeline: [
             { title: 'Idea', text: 'It makes sense.' },

@@ -2,7 +2,7 @@
 
 > 41OPS is the only training company that reaches tech production: Train → Pre-prod → Prod. Light Extended Production Architectures (EPAs) upon your legacy to consume AI efficiently.
 
-SciTheWorld is a boutique family business in state-of-the-art investing: not a fund, a conglomerate built on its own R&D. Algorithmization is the R. 41OPS is the D. We help clients put order into their transformation challenges through laser-focused training: the overall picture of AI Ops (new working protocols), the tech enablers, the ML involved, and the risk of each.
+SciTheWorld is a family business in state-of-the-art investing: not a fund, a conglomerate built on its own R&D. Algorithmization is the R. 41OPS is the D. We help clients put order into their transformation challenges through laser-focused training: the overall picture of AI Ops (new working protocols), the tech enablers, the ML involved, and the risk of each.
 
 41OPS trains first (CALM, Back to the Future), then takes the client's own artifact to pre-production and production with Data MAPs on Fractal (AI OS) or Alpha Dynamics (advanced investment). Each step only if the previous one leads there.
 
@@ -11,7 +11,7 @@ SciTheWorld is a boutique family business in state-of-the-art investing: not a f
 - [Home](https://www.41ops.com/): positioning, how we work, highlights, awards, partners, newsroom and contact.
 
 ## The group
-- [SciTheWorld](https://scitheworld.com): boutique family business in state-of-the-art investing; a conglomerate built on its own R&D.
+- [SciTheWorld](https://scitheworld.com): family business in state-of-the-art investing; a conglomerate built on its own R&D.
 - [Algorithmization](https://algorithmization.com): the R. Research centre and timestamped papers.
 - [SystematicMe](https://systematicme.com)
 - [Learning~Adaptive](https://learningadaptive.com)
