@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, input, output, booleanAttribute, inject, signal } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input, output, booleanAttribute, inject, signal, afterNextRender } from '@angular/core';
 import { SectionIndicatorComponent } from '../section-indicator/section-indicator.component';
 import { SideNavComponent } from '../side-nav/side-nav.component';
 import { SpacebarButtonComponent } from '../spacebar-button/spacebar-button.component';
@@ -401,6 +401,14 @@ export class SectionComponent {
   isFolded = input(false);
 
   hovered = signal(false);
+
+  constructor() {
+    // Load the hover picture up front so the swap is instant instead of a blank flash.
+    afterNextRender(() => {
+      const src = this.hoverImage();
+      if (src) { const img = new Image(); img.src = src; }
+    });
+  }
 
   sectionIndex = input(0);
   totalSections = input(0);
