@@ -1,5 +1,6 @@
 // Builds public/llms.txt (index) and public/llms-full.txt (full, structured)
 // from the site's English copy, including sections not currently shown on the page.
+// Superseded content (e.g. the old open/closed engagement modes) is left out on purpose.
 // Run: node tools/build-llms.mjs   (bundles src/app/i18n/en.ts with esbuild)
 import { build } from 'esbuild';
 import { writeFileSync, mkdtempSync } from 'node:fs';
@@ -91,9 +92,6 @@ ${t.unbeatableVertical.map((s) => `### ${s.title}\n${md(s.modalContent || s.cust
 full.push(`## About 41OPS in depth
 ${t.newVerticalSections.filter((s) => s.modalContent).map((s) => `### ${s.title}\n*${s.subtitle.charAt(0) + s.subtitle.slice(1).toLowerCase()}*\n\n${md(s.modalContent)}`).join('\n\n')}
 
-### Engagement modes
-${t.engagementModes.map((m) => `#### ${m.title}\n${md(m.content)}`).join('\n\n')}
-
 ### Two speeds in transformation
 ${t.transformationSpeeds.map((m) => `#### ${m.title}\n${md(m.content)}`).join('\n\n')}`);
 
@@ -148,9 +146,6 @@ ${p.lead} ${p.intro}
 - [Algorithmization](https://algorithmization.com): the R. Research centre and timestamped papers.
 - [SystematicMe](https://systematicme.com)
 - [Learning~Adaptive](https://learningadaptive.com)
-
-## Optional
-- [Previous website archive](${SITE}/llms-archive.txt): content from the earlier 41OPS site, kept for reference.
 `;
 writeFileSync('public/llms.txt', index);
 console.log('llms.txt', index.length, 'chars; llms-full.txt', full.join('').length, 'chars');

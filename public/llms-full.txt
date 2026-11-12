@@ -381,35 +381,6 @@ Our Transformation Bubbles are designed to scale both within a single organizati
 
         In these cases, Algorithmization enables coordination and efficiency gains that no single entity could achieve independently.
 
-### Engagement modes
-#### Open projects
-In open projects, the client drives the initiative.
-41OPS provides senior professionals selected not only for technical skill, but—critically—for attitude, judgment, and execution discipline.
-Beyond staffing, we introduce an additional layer of value:
-• rigorous project management,
-
-• architectural awareness,
-
-• and leverage of our internal technology to increase delivery reliability.
-
-This model has repeatedly proven effective as a trust-building mechanism, often serving as the entry point toward deeper, closed-scope transformations.
-
-#### Closed Projects
-In closed projects, 41OPS drives the transformation.
-Here, the mandate is explicit: address a clearly identified structural need and turn Algorithmization into operational reality. These engagements typically leverage Fractal and Alpha Dynamics to deliver AI-nativity inside organizations.
-In this context, it is important to be precise:
-| 41OPS does not merely sell AI projects.
-
-It delivers AI-nativization: the redesign of operations, workflows, and infrastructures so that intelligence becomes:
-• structural rather than cosmetic,
-
-• governable rather than opaque,
-
-• economically efficient rather than integration-heavy.
-
-This is the difference between deploying AI and becoming AI-native.
-More eloquently, we don’t only sell the sticks to grasp the low hanging fruits. We add the scaffolding that allows you also reach the mid and high hanging ones.
-
 ### Two speeds in transformation
 #### Gradual transformation (inside the organization)
 For organizations that want to evolve their core safely:
