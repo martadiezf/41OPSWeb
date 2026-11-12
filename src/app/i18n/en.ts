@@ -5,18 +5,19 @@ export const EN: Translations = {
         partners: 'PARTNERS',
         aboutUs: 'ABOUT US',
         awards: 'AWARDS',
-        whoTrustUs: 'WHO TRUST US',
+        whoTrustUs: 'WHO TRUSTS US',
         theGroup: 'THE GROUP',
         joinUs: 'JOIN US',
         contact: 'CONTACT',
     },
     hero: {
-        title: 'Extended Production Architectures (EPAs) to Consume AI Efficiently',
+        title: 'The only training that reaches production',
         subtitle: '41OPS',
+        description: '41OPS is the only training company that reaches tech production: Train → Pre-prod → Prod. Extended Production Architectures (EPAs) to consume AI efficiently.',
     },
     partStw: {
         titleHtml: 'Part of <u>SciTheWorld</u>',
-        description: 'We are the transformation execution arm at SciTheWorld:\n1. We translate Algorithmization theory into deep technology infrastructure.\n2. And then we onboard the technology at companies of all kinds so that they can absorb AI at ease.\n\n<div class="part-stw-extension">What does it mean? Depending on the project\'s nature, we are:\n\n– When top-down: your C-Suite Consultancy but upon bottom-up executable tech instead of Powerpoint.\n– When bottom-up: your tech consultancy but Custom SaaS instead of old school projects.\n\nAnd then, you can interconnect those projects within your company (departments and legacies up to your own algo-native OS) or with partners (unlocking trust upon novel auditability).</div>',
+        description: 'We are the transformation arm of SciTheWorld, and the only training company that reaches tech production:\n1. Train: your team learns Algorithmization on its own challenges.\n2. Pre-prod: if the training leads there, your own artifact runs on our platform, connected to your tech stack. Behind it, we translate Algorithmization theory into deep technology infrastructure.\n3. Prod: we onboard it into production, so that companies of all kinds can absorb AI at ease.\nEach step only if the previous one leads there.\n\nFor example:\n– From an event to an order, with an X-ray of what happens behind the scenes.\n– A complex recommender instead of an LLM-based one.\n\n<div class="part-stw-extension">What does it mean? Depending on the project\'s nature, we are:\n\n– When top-down: your C-Suite Consultancy but upon bottom-up executable tech instead of Powerpoint.\n– When bottom-up: your tech consultancy but Custom SaaS instead of old school projects.\n\nAnd then, you can interconnect those projects within your company (departments and legacies up to your own algo-native OS) or with partners (unlocking trust upon novel auditability).</div>',
     },
     highlights: {
         sectionTitle: 'HIGHLIGHTS',
@@ -224,7 +225,7 @@ Data MAPs Algorithmization requires an optimal weighting between business and te
         {
             title: 'Unbeatable',
             modalContent: `
-        <p>Not surprisingly, the light of above information and leveraging the belonging to SciTheWorld Group, we have become, globally, we are second-to-none in terms of:</p>
+        <p>Not surprisingly, in light of the above and as part of the SciTheWorld Group, we are second-to-none globally in terms of:</p>
         <ol>
           <li>Quality: we can not only compete with any algorithmic house but, more interestingly, aggregate them all - i.e. we are a Pareto Superior.</li>
           <li>Price: where our competitors require millions and years we can start gradual for less than €500k and less than half a year.</li>
@@ -530,9 +531,9 @@ Data MAPs Algorithmization requires an optimal weighting between business and te
         items: [
             { name: 'Banking Tech Awards: Best Tech Leader', category: 'Finalist', project: 'Our forward-looking vision' },
             { name: 'Finovate: Innovator of the Year', category: 'Finalist', project: 'Our pioneer work on Agentic AI' },
-            { name: 'Bankig Tech Awards: Best Tech of the Future: AI and Data', category: 'Winner', project: 'Our Fractal Platform' },
+            { name: 'Banking Tech Awards: Best Tech of the Future: AI and Data', category: 'Winner', project: 'Our Fractal Platform' },
             { name: 'CogX: Best Innovation in Simulation', category: 'Winner', project: 'Core of our Virtual Reality Simulation' },
-            { name: 'Banking Tech Awards: Best Trading Platform', category: 'Winner', project: 'Sergio`s UCL PhD Thesis at BBVA' },
+            { name: 'Banking Tech Awards: Best Trading Platform', category: 'Winner', project: "Sergio's UCL PhD Thesis at BBVA" },
             { name: 'UK EPSRC: Impact in the Digital Economy', category: 'Winner', project: 'Avatar Calibration as a way to minimize AI\'s negative impact in labour', year: '2015' },
         ]
     },

@@ -90,7 +90,7 @@ interface SectionData {
       [showBrackets]="true"
       bracketsColor="var(--color-1)"
       subtitleColor="gray"
-      description=""
+      [description]="ts.t().hero.description"
     />
 
     <app-part-stw

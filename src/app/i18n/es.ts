@@ -11,12 +11,13 @@ export const ES: Translations = {
         contact: 'CONTACTO',
     },
     hero: {
-        title: 'ARQUITECTURAS EXTENDIDAS DE PRODUCCIÓN (EPAS) PARA MAXIMIZAR LA EFICIENCIA DE LA IA',
+        title: 'La única formación que llega a producción',
         subtitle: '41OPS',
+        description: '41OPS es la única empresa de formación que llega a producción tecnológica: Formación → Preproducción → Producción. Arquitecturas Extendidas de Producción (EPAs) para maximizar la eficiencia de la IA.',
     },
     partStw: {
         titleHtml: 'Parte de <u>SciTheWorld</u>',
-        description: 'Somos el brazo de ejecución de transformación en SciTheWorld:\n1. Traducimos la teoría de Algorithmization en infraestructura tecnológica profunda.\n2. Y luego integramos la tecnología en todo tipo de empresas para que puedan absorber IA con facilidad.\n\n<div class="part-stw-extension">¿Qué significa esto? Dependiendo de la naturaleza del proyecto, somos:\n\n– A nivel estratégico (top-down), somos una consultoría para la alta dirección, pero basada en tecnología real y ejecutable desde la base, en lugar de en simples PowerPoints.\n– A nivel operativo (bottom-up), somos una consultoría tecnológica, pero enfocada en crear SaaS a medida en lugar de los clásicos proyectos de la vieja escuela.\n\nEl resultado: la capacidad de interconectar estas soluciones dentro de tu propia empresa (integrando departamentos y sistemas heredados hasta formar tu propio sistema operativo algorítmico) o con socios (desbloqueando un nuevo nivel de confianza gracias a una auditabilidad sin precedentes).</div>',
+        description: 'Somos el brazo de transformación de SciTheWorld, y la única empresa de formación que llega a producción tecnológica:\n1. Formación: tu equipo aprende Algorithmization sobre sus propios retos.\n2. Preproducción: si la formación lleva hasta ahí, tu propio artefacto funciona sobre nuestra plataforma, conectado a tu stack tecnológico. Detrás, traducimos la teoría de Algorithmization en infraestructura tecnológica profunda.\n3. Producción: lo integramos en producción, para que todo tipo de empresas puedan absorber IA con facilidad.\nCada paso, solo si el anterior lleva hasta él.\n\nPor ejemplo:\n– Del evento al pedido, con una radiografía de lo que ocurre entre bastidores.\n– Un recomendador complejo en lugar de uno basado en LLMs.\n\n<div class="part-stw-extension">¿Qué significa esto? Dependiendo de la naturaleza del proyecto, somos:\n\n– A nivel estratégico (top-down), somos una consultoría para la alta dirección, pero basada en tecnología real y ejecutable desde la base, en lugar de en simples PowerPoints.\n– A nivel operativo (bottom-up), somos una consultoría tecnológica, pero enfocada en crear SaaS a medida en lugar de los clásicos proyectos de la vieja escuela.\n\nEl resultado: la capacidad de interconectar estas soluciones dentro de tu propia empresa (integrando departamentos y sistemas heredados hasta formar tu propio sistema operativo algorítmico) o con socios (desbloqueando un nuevo nivel de confianza gracias a una auditabilidad sin precedentes).</div>',
     },
     highlights: {
         sectionTitle: 'HIGHLIGHTS',
@@ -524,7 +525,7 @@ Data MAPs Algorithmization requires an optimal weighting between business and te
         items: [
             { name: 'Banking Tech Awards: Mejor Líder Tecnológico', category: 'Finalista', project: 'Nuestra visión prospectiva' },
             { name: 'Finovate: Innovador del Año', category: 'Finalista', project: 'Nuestro trabajo pionero en Agentic AI' },
-            { name: 'Bankig Tech Awards: Mejor Tech del Futuro: IA y Datos', category: 'Ganador', project: 'Nuestra Plataforma Fractal' },
+            { name: 'Banking Tech Awards: Mejor Tech del Futuro: IA y Datos', category: 'Ganador', project: 'Nuestra Plataforma Fractal' },
             { name: 'CogX: Mejor Innovación en Simulación', category: 'Ganador', project: 'Núcleo de nuestra Simulación VR' },
             { name: 'Banking Tech Awards: Mejor Plataforma de Trading', category: 'Ganador', project: 'Tesis Doctoral de Sergio (UCL) en BBVA' },
             { name: 'UK EPSRC: Impact in the Digital Economy', category: 'Ganador', project: 'Calibración de Avatares como forma de minimizar el impacto negativo de la IA en el trabajo', year: '2015' },
