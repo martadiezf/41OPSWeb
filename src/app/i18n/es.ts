@@ -18,6 +18,16 @@ export const ES: Translations = {
     partStw: {
         titleHtml: 'Parte de <u>SciTheWorld</u>',
         lead: 'SciTheWorld es un negocio familiar boutique de inversión de vanguardia: no un fondo, sino un conglomerado construido sobre su propio I+D. Algorithmization es la I. 41OPS es el D.',
+        pipelineLabel: 'De la idea a la empresa',
+        pipeline: [
+            { title: 'Idea', text: 'Tiene sentido.' },
+            { title: 'Borrador del paper', text: 'En Algorithmization.' },
+            { title: 'Tecnología', text: 'Creada en 41OPS.' },
+            { title: 'Probada', text: 'En la industria.' },
+            { title: 'Paper publicado', text: 'Si es viable.' },
+            { title: 'Producto o empresa', text: 'Sobre nuestras plataformas, o una nueva empresa.' },
+        ],
+        pipelineNote: 'Ese es el nivel de nuestro D en I+D. Y cada producto y empresa que creamos hace crecer el conglomerado de SciTheWorld.',
         intro: 'Ayudamos a nuestros clientes a poner orden en sus retos de transformación mediante formación muy focalizada: la visión global de AI Ops (nuevos protocolos de trabajo), los habilitadores tecnológicos, el ML implicado y el riesgo de cada uno.',
         stepsLabel: 'Lo que ningún otro formador puede hacer',
         steps: [
@@ -64,6 +74,27 @@ export const ES: Translations = {
             },
         ],
         closing: 'Después, puedes interconectar esos proyectos dentro de tu empresa (departamentos y sistemas heredados, hasta tu propio sistema operativo algorítmico) o con socios (desbloqueando confianza gracias a una auditabilidad sin precedentes).',
+    },
+    deeper: {
+        label: 'Profundiza',
+        title: 'Nuestra caja de herramientas y metodología',
+        lead: 'Para quien quiera el detalle detrás del enfoque.',
+        moreLabel: 'Abrir',
+        toolkit: { title: 'Caja de herramientas', teaser: 'Nuestra tecnología entre bastidores, tu personalización, tu tecnología a medida por departamento y, a largo plazo, tu IA General Corporativa.' },
+        teasers: [
+            'De artesanos a profesionales de oficina orquestados.',
+            'Burbujas de transformación hacia la extrema eficiencia.',
+            'La fábrica de casos de uso algorítmicos, sobre Fractal y Alpha Dynamics.',
+        ],
+    },
+    stealth: {
+        label: 'Modo sigilo',
+        title: 'Nuestra ventaja, en privado',
+        text: 'Hemos pasado de ser muy abiertos a operar en modo sigilo. En casi todo vamos a contracorriente de los proveedores. Tras construir una marca sólida, ahora nos volvemos discretos, como hacen los mejores hedge funds. Protegemos al máximo nuestra propiedad intelectual y la de nuestros clientes seleccionados: empresas que pueden convertirse en socias y, de forma más natural, la cartera de spin-offs de SciTheWorld.',
+    },
+    seo: {
+        title: '41OPS | La única formación que llega a producción',
+        description: '41OPS, parte de SciTheWorld, forma a tu equipo en AI Ops, habilitadores tecnológicos y ML, y lleva tu artefacto a preproducción y producción sobre Fractal o Alpha Dynamics. EPAs ligeras sobre tus sistemas heredados.',
     },
     approach: {
         eyebrow: 'Cómo trabajamos',

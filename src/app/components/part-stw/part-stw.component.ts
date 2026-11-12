@@ -3,6 +3,9 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 export interface PartStwContent {
     titleHtml: string;
     lead: string;
+    pipelineLabel: string;
+    pipeline: Array<{ title: string; text: string }>;
+    pipelineNote: string;
     intro: string;
     stepsLabel: string;
     steps: Array<{ number: string; title: string; tag: string; text: string }>;

@@ -1,7 +1,19 @@
 <section class="stw">
     <div class="stw-inner">
-        <h2 class="stw-title" [innerHTML]="content().titleHtml"></h2>
+        <h2 class="stw-title" id="part-of-scitheworld" [innerHTML]="content().titleHtml"></h2>
         <p class="stw-lead">{{ content().lead }}</p>
+
+        <p class="stw-label stw-label-center">{{ content().pipelineLabel }}</p>
+        <ol class="pipeline">
+            @for (p of content().pipeline; track p.title; let i = $index) {
+                <li class="pipe">
+                    <span class="pipe-n">{{ i + 1 }}</span>
+                    <span class="pipe-title">{{ p.title }}</span>
+                    <span class="pipe-text">{{ p.text }}</span>
+                </li>
+            }
+        </ol>
+        <p class="pipeline-note">{{ content().pipelineNote }}</p>
         <p class="stw-intro">{{ content().intro }}</p>
 
         <p class="stw-label">{{ content().stepsLabel }}</p>

@@ -8,6 +8,8 @@ import { LogoCarouselComponent } from './components/logo-carousel/logo-carousel.
 import { NavBarComponent, NavCommand } from './components/nav-bar/nav-bar.component';
 import { PartStwComponent } from './components/part-stw/part-stw.component';
 import { ApproachComponent } from './components/approach/approach.component';
+import { DeeperComponent, DeeperTile } from './components/deeper/deeper.component';
+import { StealthComponent } from './components/stealth/stealth.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
 import { CursorFollowerComponent } from './components/cursor-follower/cursor-follower.component';
 import { PapersListComponent, Paper } from './components/papers-list/papers-list.component';
@@ -52,6 +54,8 @@ interface SectionData {
     LogoCarouselComponent,
     PartStwComponent,
     ApproachComponent,
+    DeeperComponent,
+    StealthComponent,
 
     PreloaderComponent,
     CursorFollowerComponent,
@@ -120,31 +124,6 @@ interface SectionData {
     />
 
 
-    <app-sections-container
-      layout="horizontal"
-      viewportHeightVh="85"
-      (sectionChanged)="onSectionChanged($event)"
-      (navigateRequest)="handleNavigateRequest($event)"
-      #horizontalContainer
-      id="highlights"
-    >
-      @for (section of horizontalSections(); track section.id) {
-        <app-section
-          [id]="section.id"
-          [title]="section.title"
-          [subtitle]="section.subtitle"
-          [backgroundColor]="section.backgroundColor"
-          [navColor]="section.navColor || '#000000'"
-          [image]="section.image"
-          [hoverImage]="section.hoverImage"
-          [totalSections]="horizontalSections().length"
-          [sectionIndex]="$index"
-          [globalCurrentSection]="horizontalContainer.currentIndex()"
-          (navigate)="horizontalContainer.scrollToSection($event)"
-          (nextSection)="horizontalContainer.navigateNext()"
-        />
-      }
-    </app-sections-container>
 
     <div class="awards-block" id="partners">
       <app-academic-partners
@@ -156,38 +135,6 @@ interface SectionData {
       />
     </div>
 
-    <!-- NEW: Horizontal container with 5 sections -->
-    <app-sections-container
-      layout="horizontal"
-      viewportHeightVh="85"
-      (sectionChanged)="onSectionChanged($event)"
-      (navigateRequest)="handleNavigateRequest($event)"
-      #horizontalContainerNew
-      id="about-us"
-    >
-      @for (section of horizontalSectionsNew(); track section.id) {
-        <app-section
-          [id]="section.id"
-          [title]="section.title"
-          [subtitle]="section.subtitle"
-          [backgroundColor]="section.backgroundColor"
-          [navColor]="section.navColor || '#000000'"
-          [textColor]="section.textColor || '#ffffff'"
-          [image]="section.image"
-          [modalContent]="section.modalContent"
-          (requestModal)="openModal($event)"
-          [totalSections]="horizontalSectionsNew().length"
-          [sectionIndex]="$index"
-          [globalCurrentSection]="horizontalContainerNew.currentIndex()"
-          (navigate)="horizontalContainerNew.scrollToSection($event)"
-          (nextSection)="horizontalContainerNew.navigateNext()"
-        >
-          @if (section.customContent) {
-            <div [innerHTML]="section.customContent" class="section-custom-content"></div>
-          }
-        </app-section>
-      }
-    </app-sections-container>
 
     <!-- MOVED: Awards List -->
     <div class="awards-block" id="awards">
@@ -229,6 +176,16 @@ interface SectionData {
 
     <app-logo-carousel id="who-trust-us" />
 
+    <app-deeper
+      id="about-us"
+      [label]="ts.t().deeper.label"
+      [title]="ts.t().deeper.title"
+      [lead]="ts.t().deeper.lead"
+      [moreLabel]="ts.t().deeper.moreLabel"
+      [tiles]="deeperTiles()"
+      (open)="openModal($event)"
+    />
+
     <div class="newsroom-block" id="newsroom">
       <app-newsroom 
         [title]="ts.t().newsroom.title"
@@ -247,6 +204,13 @@ interface SectionData {
         [closeLabel]="ts.t().joinUs.close"
       />
     </div>
+
+    <app-stealth
+      id="stealth"
+      [label]="ts.t().stealth.label"
+      [title]="ts.t().stealth.title"
+      [text]="ts.t().stealth.text"
+    />
 
     <app-contact-us id="contact" />
 
@@ -661,6 +625,28 @@ export class AppComponent {
       modalContent: this.ts.t().aboutUsHorizontal[2].modalContent
     }
   ]);
+
+  deeperTiles = computed<DeeperTile[]>(() => {
+    const t = this.ts.t();
+    const about = this.horizontalSectionsNew();
+    const tiles: DeeperTile[] = [{
+      title: t.deeper.toolkit.title,
+      teaser: t.deeper.toolkit.teaser,
+      image: 'img/toolkit/toolkit_messages_41OPS_white.png',
+      imageAlt: t.deeper.toolkit.teaser,
+      color: '#000000',
+      content: `<img src="img/toolkit/toolkit_messages_41OPS_white.png" alt="${t.deeper.toolkit.teaser}" style="width:100%;height:auto;border-radius:8px" />`,
+    }];
+    about.forEach((sec, i) => tiles.push({
+      title: sec.title,
+      teaser: t.deeper.teasers[i] ?? '',
+      image: sec.image ?? '',
+      imageAlt: sec.title,
+      color: sec.backgroundColor,
+      content: sec.modalContent ?? '',
+    }));
+    return tiles;
+  });
 
   /* ── 2 NEW sections (extracted from horizontal) ── */
   verticalSectionsUnbeatable = computed<SectionData[]>(() => [

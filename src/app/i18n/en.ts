@@ -18,6 +18,16 @@ export const EN: Translations = {
     partStw: {
         titleHtml: 'Part of <u>SciTheWorld</u>',
         lead: 'SciTheWorld is a boutique family business in state-of-the-art investing: not a fund, a conglomerate built on its own R&D. Algorithmization is the R. 41OPS is the D.',
+        pipelineLabel: 'From idea to company',
+        pipeline: [
+            { title: 'Idea', text: 'It makes sense.' },
+            { title: 'Draft paper', text: 'At Algorithmization.' },
+            { title: 'Tech', text: 'Built at 41OPS.' },
+            { title: 'Proven', text: 'In the industry.' },
+            { title: 'Published paper', text: 'If feasible.' },
+            { title: 'Product or company', text: 'On our platforms, or a new company.' },
+        ],
+        pipelineNote: 'That is the level of our D in R&D. And every product and company we create grows SciTheWorld\'s conglomerate.',
         intro: 'We help clients put order into their transformation challenges through laser-focused training: the overall picture of AI Ops (new working protocols), the tech enablers, the ML involved, and the risk of each.',
         stepsLabel: 'What no other trainer can do',
         steps: [
@@ -64,6 +74,27 @@ export const EN: Translations = {
             },
         ],
         closing: 'Then you can interconnect those projects within your company (departments and legacy systems, up to your own algo-native OS) or with partners (unlocking trust through novel auditability).',
+    },
+    deeper: {
+        label: 'Go deeper',
+        title: 'Our toolkit and methodology',
+        lead: 'For those who want the detail behind the approach.',
+        moreLabel: 'Open',
+        toolkit: { title: 'Toolkit', teaser: 'Our tech behind the scenes, your customization, your custom tech per department and, in the long run, your Corporate AGI.' },
+        teasers: [
+            'From artisans to orchestrated white collars.',
+            'Transformation bubbles towards extreme efficiency.',
+            'The factory of algorithmic use cases, on Fractal and Alpha Dynamics.',
+        ],
+    },
+    stealth: {
+        label: 'Stealth mode',
+        title: 'Our edge stays private',
+        text: 'We have moved from highly open to stealth mode. In most things we run opposite to the providers\' momentum. Having built a strong brand, we are now going secretive, as the best hedge funds do. We protect our own IP to the maximum, and that of our selected clients: companies that can become partners and, more naturally, SciTheWorld\'s portfolio of spin-offs.',
+    },
+    seo: {
+        title: '41OPS | The only training that reaches tech production',
+        description: '41OPS, part of SciTheWorld, trains your team on AI Ops, tech enablers and ML, then takes your artifact to pre-production and production on Fractal or Alpha Dynamics. Light EPAs upon your legacy.',
     },
     approach: {
         eyebrow: 'How we work',

@@ -17,7 +17,7 @@ export interface NewsItem {
   host: { 'class': 'newsroom-host' },
   template: `
     <!-- ══ Main section title ══ -->
-    <h1 class="newsroom-title">{{ title() }}</h1>
+    <h2 class="newsroom-title">{{ title() }}</h2>
 
     <!-- ══ CONTAINER 1: Featured area ══ -->
     <div class="featured-area">

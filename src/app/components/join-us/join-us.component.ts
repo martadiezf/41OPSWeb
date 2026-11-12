@@ -19,7 +19,7 @@ export interface JobOffer {
     <!-- ══ HERO SECTION ══ -->
     <div class="hero-section">
       <div class="hero-content">
-        <h1 class="hero-title">{{ title() }}</h1>
+        <h2 class="hero-title">{{ title() }}</h2>
         <div class="hero-description" [innerHTML]="description()"></div>
       </div>
     </div>

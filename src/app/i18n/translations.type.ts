@@ -16,6 +16,9 @@ export interface Translations {
     partStw: {
         titleHtml: string;
         lead: string;
+        pipelineLabel: string;
+        pipeline: Array<{ title: string; text: string }>;
+        pipelineNote: string;
         intro: string;
         stepsLabel: string;
         steps: Array<{ number: string; title: string; tag: string; text: string }>;
@@ -25,6 +28,23 @@ export interface Translations {
         modesLabel: string;
         modes: Array<{ title: string; text: string }>;
         closing: string;
+    };
+    deeper: {
+        label: string;
+        title: string;
+        lead: string;
+        moreLabel: string;
+        toolkit: { title: string; teaser: string };
+        teasers: string[];
+    };
+    stealth: {
+        label: string;
+        title: string;
+        text: string;
+    };
+    seo: {
+        title: string;
+        description: string;
     };
     approach: {
         eyebrow: string;

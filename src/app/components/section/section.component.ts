@@ -29,7 +29,7 @@ import { TranslationService } from '../../i18n/translation.service';
     <div class="section-content" [class.full-width]="isAccordionSection() || fullWidth()" [class.has-image]="image()" [class.align-start]="!image()">
       @if (!isAccordionSection()) {
         <div class="text-container">
-          <h1 class="section-title">{{ title() }}</h1>
+          <h2 class="section-title">{{ title() }}</h2>
           @if (subtitle()) {
             <p class="section-subtitle">{{ subtitle() }}</p>
           }
