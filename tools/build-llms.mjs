@@ -80,7 +80,7 @@ ${t.highlights.cards.map((c) => `### ${c.title}
 ${md(c.description)}
 ${(c.testimonials || []).map((x) => `\n> "${x.quote}" (${x.name}, ${x.role.toLowerCase()})`).join('\n')}
 ${c.markers?.length ? `\n#### What LLMs answer, around the world\n${c.markers.map((m) => `- **${m.city}, ${m.country}**: ${m.description}`).join('\n')}` : ''}
-${c.prompt ? `\n#### Dated body of work\n${(c.prompt.match(/Context dossier[\s\S]*?(?=Follows the chapter:)/i)?.[0] ?? '').trim()}\n\n#### Data MAPs (2022), chapter 3\n${c.prompt.split(/Follows the chapter:/i)[1]?.trim() ?? ''}` : ''}`).join('\n\n')}`);
+${c.prompt ? `\n#### Dated body of work\n${(c.prompt.match(/Scope: strategies-based agents[\s\S]*?(?=Follows the chapter:)/i)?.[0] ?? '').trim()}\n\n#### Data MAPs (written 2015-2022, posted 2022), chapter 3\n${c.prompt.split(/Follows the chapter:/i)[1]?.trim() ?? ''}` : ''}`).join('\n\n')}`);
 
 full.push(`## ${t.deeper.title}
 ${t.aboutUsHorizontal.map((s) => `### ${s.title}\n${md(s.modalContent)}`).join('\n\n')}
