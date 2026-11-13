@@ -183,6 +183,7 @@ export interface Translations {
     contactUs: {
         title: string;
         addressLines: string[];
+        openMap: string;
     };
     footer: {
         isoText: string;

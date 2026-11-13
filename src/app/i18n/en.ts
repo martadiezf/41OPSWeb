@@ -100,13 +100,13 @@ export const EN: Translations = {
         ],
     },
     tryIt: {
-        label: 'Try it yourself',
+        label: "Don't miss our experiment",
         title: "Don't take our word for it. Ask your AI.",
         text: 'Copy a short prompt with a chapter we published in 2022, paste it into ChatGPT, Claude, Gemini or any AI, and judge for yourself: was it early agentic architecture?',
         copy: 'Copy the prompt',
         copied: 'Copied. Now paste it into your AI',
         openIn: 'Open:',
-        reopen: 'Ask your AI about us',
+        reopen: "Don't miss our experiment",
         close: 'Close',
     },
     edge: {
@@ -639,6 +639,7 @@ export const EN: Translations = {
     },
     contactUs: {
         title: 'CONTACT US',
+        openMap: 'Open in Google Maps',
         addressLines: ['C. de Pradillo, 68', '28002 Madrid, Spain'],
     },
     footer: {

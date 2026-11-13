@@ -100,13 +100,13 @@ export const ES: Translations = {
         ],
     },
     tryIt: {
-        label: 'Pruébalo tú mismo',
+        label: "No te pierdas nuestro experimento",
         title: 'No te fíes de nuestra palabra. Pregúntale a tu IA.',
         text: 'Copia un prompt breve con un capítulo que publicamos en 2022, pégalo en ChatGPT, Claude, Gemini o cualquier IA y juzga por ti mismo: ¿era ya arquitectura agéntica temprana?',
         copy: 'Copiar el prompt',
         copied: 'Copiado. Ahora pégalo en tu IA',
         openIn: 'Abrir:',
-        reopen: 'Pregúntale a tu IA por nosotros',
+        reopen: "No te pierdas nuestro experimento",
         close: 'Cerrar',
     },
     edge: {
@@ -654,6 +654,7 @@ export const ES: Translations = {
     },
     contactUs: {
         title: 'CONTÁCTANOS',
+        openMap: 'Abrir en Google Maps',
         addressLines: ['C. de Pradillo, 68', '28002 Madrid, España'],
     },
     footer: {
