@@ -34,10 +34,11 @@ import { DOCUMENT } from '@angular/common';
             </div>
 
             @if (showScrollIndicator()) {
-              <div class="mobile-scroll-indicator">
-                <img src="img/logo-nav-bar.gif" alt="Robot Indicator" class="indicator-bot">
+              <button type="button" class="mobile-scroll-indicator" (click)="onIndicatorClick($event)" (touchstart)="$event.stopPropagation()">
+                <img src="img/logo-nav-bar.gif" alt="" class="indicator-bot">
                 <span class="indicator-text" [innerHTML]="indicatorText()"></span>
-              </div>
+                <span class="indicator-arrow" aria-hidden="true">→</span>
+              </button>
             }
         </div>
     `,
@@ -74,7 +75,9 @@ import { DOCUMENT } from '@angular/common';
     }
 
     /* ─── Mobile Scroll Indicator ─── */
-    .mobile-scroll-indicator { display: none; }
+    .mobile-scroll-indicator { display: none; font: inherit; }
+    .indicator-arrow { font-size: 1.1em; color: var(--color-1, #E85D04); transition: transform 0.2s ease; }
+    .mobile-scroll-indicator:hover .indicator-arrow { transform: translateX(3px); }
 
     @media (min-width: 901px) {
     .mobile-scroll-indicator {
@@ -95,7 +98,8 @@ import { DOCUMENT } from '@angular/common';
         font-size: 0.85rem;
         color: #1a1a1a;
         white-space: nowrap;
-        pointer-events: none;
+        pointer-events: auto;
+        cursor: pointer;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
       }
     }
@@ -130,7 +134,8 @@ import { DOCUMENT } from '@angular/common';
         align-items: center;
         gap: 1rem;
         z-index: 10000;
-        pointer-events: none; /* Let clicks pass through */
+        pointer-events: auto; /* tapping the hint moves to the next message */
+        cursor: pointer;
         animation: indicatorFadeIn 1s cubic-bezier(0.2, 0.8, 0.2, 1);
         white-space: nowrap;
       }
@@ -421,6 +426,13 @@ export class SectionsContainerComponent implements OnDestroy {
     }
 
     /* ───────── Shared ───────── */
+
+    /** The hint says 'to the right': clicking or tapping it does exactly that. */
+    onIndicatorClick(e: Event) {
+        e.stopPropagation();
+        this.hideMobileIndicator();
+        this.navigateNext();
+    }
 
     navigateNext() {
         if (this.isHorizontal()) {
