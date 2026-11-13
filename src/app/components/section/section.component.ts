@@ -56,9 +56,7 @@ import { TranslationService } from '../../i18n/translation.service';
     <div class="right-nav">
       @if (totalSections() > 0 && !isAccordionSection() && !fullWidth()) {
         <app-side-nav [totalSections]="totalSections()" [currentSection]="globalCurrentSection()" [style.--nav-color]="navColor()" (sectionClicked)="navigate.emit($event)" />
-        @if (sectionIndex() < totalSections() - 1) {
-          <app-spacebar-button [isActive]="globalCurrentSection() === sectionIndex()" (pressed)="nextSection.emit()" />
-        }
+        <app-spacebar-button [isActive]="globalCurrentSection() === sectionIndex()" (pressed)="nextSection.emit()" />
       }
     </div>
   `,
@@ -150,6 +148,7 @@ import { TranslationService } from '../../i18n/translation.service';
       text-align: left;
       padding: 2rem 0;
       flex: 1; /* Takes available space */
+      min-width: 0; /* allow shrinking so the right-hand controls never get pushed out */
       max-width: 1400px; 
       opacity: 1;
       transform: translateY(0);

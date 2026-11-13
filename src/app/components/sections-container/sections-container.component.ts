@@ -419,7 +419,9 @@ export class SectionsContainerComponent implements OnDestroy {
 
     navigateNext() {
         if (this.isHorizontal()) {
-            this.navigateHorizontal(this.currentIndex() + 1);
+            // From the last panel, the space bar goes back to the first one
+            const n = this.sections.length;
+            this.navigateHorizontal(n ? (this.currentIndex() + 1) % n : 0);
         } else {
             const nextIndex = Math.min(this.currentIndex() + 1, this.sections.length - 1);
             this.navigateToSection(nextIndex);

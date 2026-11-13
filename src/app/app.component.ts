@@ -669,9 +669,9 @@ export class AppComponent {
   ]);
 
   readonly stepBands = [
-    { color: '#E63946', image: 'img/birrete.png' },
-    { color: '#457B9D', image: 'img/casco.png' },
-    { color: '#2A9D8F', image: 'img/sections/scaffold_apple_tree.png' },
+    { color: '#E63946', image: 'img/sections/scaffold_apple_tree.png' },
+    { color: '#457B9D', image: 'img/birrete.png' },
+    { color: '#2A9D8F', image: 'img/casco.png' },
   ];
 
   /** Go deeper carousel: the toolkit first, then the three about-us panels. */
