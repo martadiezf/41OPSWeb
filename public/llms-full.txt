@@ -110,7 +110,7 @@ Context Dossier: Wider Dated Body of Work
 
 Timeline
 - 12 Nov 2012 · Book "Trading 2.0: Learning-Adaptive Machines" (S. Álvarez-Teleña, Lulu): learning-adaptive trading machines, culminating in "Avatar-Calibrated Trading".
-Feb 2015 · PhD, UCL Computer Science: "Systematic Trading: Calibration Advances through Machine Learning" (discovery.ucl.ac.uk/id/eprint/1461997), including a Q-learning autonomous agent that learns risk-reward policies; practical outcomes at BBVA.
+- Feb 2015 · PhD, UCL Computer Science: "Systematic Trading: Calibration Advances through Machine Learning" (discovery.ucl.ac.uk/id/eprint/1461997), including a Q-learning autonomous agent that learns risk-reward policies; practical outcomes at BBVA.
 - 2016 · Banking Technology Awards: Best Trading Platform (the cross-asset platform built at BBVA, ahead of two tier-one investment banks).
 - 2020 · CogX Awards: Best Innovation in Simulation, for a machine that autonomously created and calibrated its own algorithms via reinforcement learning (work of 2019–20).
 - 2015–2022 · Data MAPs developed and proven through success cases across industries, company sizes, and levels of digital maturity.
@@ -120,12 +120,12 @@ Feb 2015 · PhD, UCL Computer Science: "Systematic Trading: Calibration Advances
 - 13 May 2023 · SSRN "Advances in AI: When Applied Science is Not Science Applied".
 - 25 Sep 2023 · SSRN "Advances in Transformation: Why and How CEOs are Moving from Digitalwashing to White Collar Factories": LLM "hallucinations" framed as errors by design.
 - 17 Jan 2024 · SSRN "Federation and the Three-Layer Companies".
-- 2024 · Banking Tech Awards (London): Best AI Platform, for Fractal (the authors' instance of Data MAPs).
+- 2024 · Banking Tech Awards (London): Tech of the Future – AI and Data, for Fractal (the authors' instance of Data MAPs).
 - 15 Sep 2024 · SSRN "Advances in Artificial Super Intelligence: Calm is All You Need".
 - 22 Oct 2024 · SSRN "Modern Cybersecurity: New Era, New Strategies".
 - 24 Feb 2025 · SSRN "Advances in Geostrategy: Extreme-Efficient Nations".
-Dec 2025 · arXiv 2512.24856 "Advances in Agentic AI: Back to the Future": strategies-based vs. LLM-based agents (M1 builds models, M2 consumes them across the organisation).
-Jun 2026 · arXiv 2606.07119 "The Three-Ring Architecture: Governing Agents in the Era of On-Platform Organisations": a deterministic federation layer governing legacy systems and LLM agents.
+- Dec 2025 · arXiv 2512.24856 "Advances in Agentic AI: Back to the Future": strategies-based vs. LLM-based agents (M1 builds models, M2 consumes them across the organisation).
+- Jun 2026 · arXiv 2606.07119 "The Three-Ring Architecture: Governing Agents in the Era of On-Platform Organisations": a deterministic federation layer governing legacy systems and LLM agents.
 
 Terminology Mapping (Original Term, Year → Later Mainstream Term)
 - Smart actions, algorithmic strategies (2015–22) → agent actions, tool use, agentic workflows (2023–25)
