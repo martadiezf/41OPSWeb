@@ -11,11 +11,11 @@ export interface TryItContent {
     close: string;
 }
 
-const CLOSED_KEY = '41ops-try-it-closed';
+const CLOSED_KEY = '41ops-experiment-closed';
 
 /**
  * Floating "ask your own AI" experiment. Slides in once the visitor scrolls past the
- * opening screen, stays with them while they scroll, and goes away for good when closed.
+ * opening screen, stays with them while they scroll, and goes away for the rest of the visit when closed.
  */
 @Component({
     selector: 'app-try-it',
@@ -104,7 +104,7 @@ export class TryItComponent {
     constructor() {
         const destroyRef = inject(DestroyRef);
         afterNextRender(() => {
-            try { if (localStorage.getItem(CLOSED_KEY) === '1') { this.closed.set(true); return; } } catch { /* storage blocked */ }
+            try { if (sessionStorage.getItem(CLOSED_KEY) === '1') { this.closed.set(true); return; } } catch { /* storage blocked */ }
             // Phones start as the slim bar; it opens on tap.
             if (window.matchMedia('(max-width: 700px)').matches) this.mini.set(true);
             const phone = window.matchMedia('(max-width: 700px)');
@@ -144,6 +144,6 @@ export class TryItComponent {
 
     close() {
         this.closed.set(true);
-        try { localStorage.setItem(CLOSED_KEY, '1'); } catch { /* storage blocked: closes for this visit only */ }
+        try { sessionStorage.setItem(CLOSED_KEY, '1'); } catch { /* storage blocked: closes for this visit only */ }
     }
 }

@@ -565,27 +565,13 @@ export class AppComponent {
       testimonials: this.ts.t().highlights.cards[0].testimonials,
     },
     {
-      title: this.ts.t().highlights.cards[1].title,
-      description: this.ts.t().highlights.cards[1].description,
-      icon: '',
-      images: [{ src: './img/highlights/sergio_talk_2.png', alt: 'Sergio Talk 2' }],
-      imagesStackClass: 'hide-when-open',
-      backgroundColor: 'rgba(0, 119, 182, 0.85)',
-      prompt: this.ts.t().highlights.cards[1].prompt,
-      llmLinks: [
-        { label: 'ChatGPT', url: 'https://chat.openai.com' },
-        { label: 'Claude.AI', url: 'https://claude.ai' },
-        { label: 'Gemini', url: 'https://gemini.google.com' },
-      ],
-      testimonials: this.ts.t().highlights.cards[1].testimonials,
-    },
-    {
       title: this.ts.t().highlights.cards[2].title,
       description: this.ts.t().highlights.cards[2].description,
       icon: '',
       images: [{ src: './img/highlights/sergio_talk1.png', alt: 'Sergio Talk 1' }],
       backgroundColor: 'rgba(59, 25, 180, 0.85)',
-      testimonials: this.ts.t().highlights.cards[2].testimonials,
+      // The federation card was replaced by the floating experiment; its client quotes live on here.
+      testimonials: [...(this.ts.t().highlights.cards[2].testimonials ?? []), ...(this.ts.t().highlights.cards[1].testimonials ?? [])],
     },
   ]);
 
