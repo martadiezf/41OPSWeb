@@ -44,6 +44,16 @@ export interface Translations {
         lead: string;
         audiences: Array<{ who: string; title: string; text: string }>;
     };
+    tryIt: {
+        label: string;
+        title: string;
+        text: string;
+        copy: string;
+        copied: string;
+        openIn: string;
+        reopen: string;
+        close: string;
+    };
     edge: {
         label: string;
         title: string;

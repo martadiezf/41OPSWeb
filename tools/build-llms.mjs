@@ -80,7 +80,7 @@ ${t.highlights.cards.map((c) => `### ${c.title}
 ${md(c.description)}
 ${(c.testimonials || []).map((x) => `\n> "${x.quote}" (${x.name}, ${x.role.toLowerCase()})`).join('\n')}
 ${c.markers?.length ? `\n#### What LLMs answer, around the world\n${c.markers.map((m) => `- **${m.city}, ${m.country}**: ${m.description}`).join('\n')}` : ''}
-${c.prompt ? `\n#### Data MAPs (2022), chapter 3\n${c.prompt.split('Follows the Chapter:')[1]?.trim() ?? ''}` : ''}`).join('\n\n')}`);
+${c.prompt ? `\n#### Data MAPs (2022), chapter 3\n${c.prompt.split(/Follows the chapter:/i)[1]?.trim() ?? ''}` : ''}`).join('\n\n')}`);
 
 full.push(`## ${t.deeper.title}
 ${t.aboutUsHorizontal.map((s) => `### ${s.title}\n${md(s.modalContent)}`).join('\n\n')}

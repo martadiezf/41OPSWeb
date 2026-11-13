@@ -8,6 +8,7 @@ import { LogoCarouselComponent } from './components/logo-carousel/logo-carousel.
 import { NavBarComponent, NavCommand } from './components/nav-bar/nav-bar.component';
 import { PartStwComponent } from './components/part-stw/part-stw.component';
 import { ApproachComponent } from './components/approach/approach.component';
+import { TryItComponent } from './components/try-it/try-it.component';
 import { DeeperTile } from './components/deeper/deeper.component';
 import { BandComponent } from './components/band/band.component';
 import { TrainingComponent } from './components/training/training.component';
@@ -47,6 +48,7 @@ interface SectionData {
   selector: 'app-root',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
+    TryItComponent,
     NavBarComponent,
     HeroComponent,
     SectionsContainerComponent,
@@ -229,6 +231,8 @@ interface SectionData {
     />
 
     <app-contact-us id="contact" />
+
+    <app-try-it [content]="ts.t().tryIt" [prompt]="ts.t().highlights.cards[1].prompt ?? ''" />
 
     <app-footer />
 
@@ -574,28 +578,6 @@ export class AppComponent {
         { label: 'Gemini', url: 'https://gemini.google.com' },
       ],
       testimonials: this.ts.t().highlights.cards[1].testimonials,
-      markers: [
-        { id: 'san-francisco', city: this.ts.t().highlights.cards[1].markers![0].city, country: this.ts.t().highlights.cards[1].markers![0].country, x: 16.0, y: 29.0, description: this.ts.t().highlights.cards[1].markers![0].description },
-        { id: 'new-york', city: this.ts.t().highlights.cards[1].markers![1].city, country: this.ts.t().highlights.cards[1].markers![1].country, x: 29.4, y: 27.4, description: this.ts.t().highlights.cards[1].markers![1].description },
-        { id: 'los-angeles', city: this.ts.t().highlights.cards[1].markers![2].city, country: this.ts.t().highlights.cards[1].markers![2].country, x: 17.2, y: 31.1, description: this.ts.t().highlights.cards[1].markers![2].description },
-        { id: 'chicago', city: this.ts.t().highlights.cards[1].markers![3].city, country: this.ts.t().highlights.cards[1].markers![3].country, x: 25.7, y: 26.7, description: this.ts.t().highlights.cards[1].markers![3].description },
-        { id: 'houston', city: this.ts.t().highlights.cards[1].markers![4].city, country: this.ts.t().highlights.cards[1].markers![4].country, x: 23.5, y: 33.5, description: this.ts.t().highlights.cards[1].markers![4].description },
-        { id: 'philadelphia', city: this.ts.t().highlights.cards[1].markers![5].city, country: this.ts.t().highlights.cards[1].markers![5].country, x: 29.1, y: 27.8, description: this.ts.t().highlights.cards[1].markers![5].description },
-        { id: 'london', city: this.ts.t().highlights.cards[1].markers![6].city, country: this.ts.t().highlights.cards[1].markers![6].country, x: 49.9, y: 21.4, description: this.ts.t().highlights.cards[1].markers![6].description },
-        { id: 'manchester', city: this.ts.t().highlights.cards[1].markers![7].city, country: this.ts.t().highlights.cards[1].markers![7].country, x: 49.4, y: 20.3, description: this.ts.t().highlights.cards[1].markers![7].description },
-        { id: 'edinburgh', city: this.ts.t().highlights.cards[1].markers![8].city, country: this.ts.t().highlights.cards[1].markers![8].country, x: 49.1, y: 18.9, description: this.ts.t().highlights.cards[1].markers![8].description },
-        { id: 'birmingham', city: this.ts.t().highlights.cards[1].markers![9].city, country: this.ts.t().highlights.cards[1].markers![9].country, x: 49.5, y: 20.8, description: this.ts.t().highlights.cards[1].markers![9].description },
-        { id: 'new-delhi', city: this.ts.t().highlights.cards[1].markers![10].city, country: this.ts.t().highlights.cards[1].markers![10].country, x: 71.4, y: 34.1, description: this.ts.t().highlights.cards[1].markers![10].description },
-        { id: 'mumbai', city: this.ts.t().highlights.cards[1].markers![11].city, country: this.ts.t().highlights.cards[1].markers![11].country, x: 70.2, y: 39.4, description: this.ts.t().highlights.cards[1].markers![11].description },
-        { id: 'madrid', city: this.ts.t().highlights.cards[1].markers![12].city, country: this.ts.t().highlights.cards[1].markers![12].country, x: 49.0, y: 27.5, description: this.ts.t().highlights.cards[1].markers![12].description },
-        { id: 'barcelona', city: this.ts.t().highlights.cards[1].markers![13].city, country: this.ts.t().highlights.cards[1].markers![13].country, x: 50.6, y: 27.0, description: this.ts.t().highlights.cards[1].markers![13].description },
-        { id: 'tehran', city: this.ts.t().highlights.cards[1].markers![14].city, country: this.ts.t().highlights.cards[1].markers![14].country, x: 64.3, y: 30.2, description: this.ts.t().highlights.cards[1].markers![14].description },
-        { id: 'paris', city: this.ts.t().highlights.cards[1].markers![15].city, country: this.ts.t().highlights.cards[1].markers![15].country, x: 50.7, y: 22.9, description: this.ts.t().highlights.cards[1].markers![15].description },
-        { id: 'bucharest', city: this.ts.t().highlights.cards[1].markers![16].city, country: this.ts.t().highlights.cards[1].markers![16].country, x: 57.3, y: 25.3, description: this.ts.t().highlights.cards[1].markers![16].description },
-        { id: 'hong-kong', city: this.ts.t().highlights.cards[1].markers![17].city, country: this.ts.t().highlights.cards[1].markers![17].country, x: 81.7, y: 37.6, description: this.ts.t().highlights.cards[1].markers![17].description },
-        { id: 'seoul', city: this.ts.t().highlights.cards[1].markers![18].city, country: this.ts.t().highlights.cards[1].markers![18].country, x: 85.3, y: 29.1, description: this.ts.t().highlights.cards[1].markers![18].description },
-        { id: 'toronto', city: this.ts.t().highlights.cards[1].markers![19].city, country: this.ts.t().highlights.cards[1].markers![19].country, x: 27.9, y: 25.7, description: this.ts.t().highlights.cards[1].markers![19].description },
-      ],
     },
     {
       title: this.ts.t().highlights.cards[2].title,
