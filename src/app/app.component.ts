@@ -297,11 +297,18 @@ interface SectionData {
     .deeper-head .bracket-label { margin-bottom: 1rem; }
     #go-deeper { display: block; margin-bottom: var(--section-y) !important; }
     /* Go deeper panels: titles sized to their column so they never run into the picture */
-    #go-deeper ::ng-deep .text-container { flex: 0 0 40%; max-width: 40%; min-width: 0; position: relative; z-index: 2; }
+    #go-deeper ::ng-deep .text-container { flex: 0 0 40%; max-width: 40%; min-width: 0; position: relative; top: 0; z-index: 2; }
     #go-deeper ::ng-deep .content-slot:empty { display: none; }
     #go-deeper ::ng-deep .section-title { font-size: clamp(2.4rem, 4.6vw, 5.2rem); overflow-wrap: normal; hyphens: none; }
     #go-deeper ::ng-deep .section-image-container { flex: 1 1 0; min-width: 0; margin-right: 0; justify-content: center; }
     #go-deeper ::ng-deep .section-image { width: 100%; max-height: 60vh; object-fit: contain; }
+    /* Toolkit panel: the diagram is wide and labelled, so it gets the full width under the title */
+    #go-deeper ::ng-deep app-section:first-of-type .section-content.has-image { flex-direction: column; align-items: stretch; justify-content: center; gap: 1.5rem; }
+    #go-deeper ::ng-deep app-section:first-of-type .text-container { flex: 0 0 auto; max-width: 100%; flex-direction: row; align-items: center; justify-content: flex-start; gap: 2rem; }
+    #go-deeper ::ng-deep app-section:first-of-type .see-more-btn { margin-top: 0; }
+    #go-deeper ::ng-deep app-section:first-of-type .section-title { font-size: clamp(2.4rem, 4vw, 4.2rem); }
+    #go-deeper ::ng-deep app-section:first-of-type .section-image-container { flex: 1 1 auto; justify-content: center; }
+    #go-deeper ::ng-deep app-section:first-of-type .section-image { width: 100%; max-height: 54vh; }
     @media (max-width: 900px) {
       #go-deeper ::ng-deep .text-container { max-width: 100%; flex: 0 0 auto; }
       #go-deeper ::ng-deep .section-title { font-size: clamp(2.2rem, 10vw, 3.4rem); }
