@@ -29,7 +29,7 @@ const CLOSED_KEY = '41ops-experiment-closed';
             <span class="dot" aria-hidden="true"></span>{{ copiedOnce() ? c().copied : c().reopen }}
           </button>
         } @else {
-          <img class="photo" src="img/highlights/sergio_talk_2.png" alt="" />
+          <img class="photo" src="img/highlights/experiment_talk.jpg" alt="" width="720" height="397" (error)="photoOk.set(false)" [hidden]="!photoOk()" />
           <p class="bracket-label">{{ c().label }}</p>
           <h2 class="title">{{ c().title }}</h2>
           <p class="text">{{ c().text }}</p>
@@ -56,7 +56,7 @@ const CLOSED_KEY = '41ops-experiment-closed';
       animation: in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
     @keyframes in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
-    .photo { display: block; width: calc(100% + 2.8rem); height: 130px; object-fit: cover; object-position: center 30%; margin: -1.4rem -1.4rem 1rem; }
+    .photo { display: block; width: calc(100% + 2.8rem); height: 180px; object-fit: cover; object-position: center 45%; margin: -1.4rem -1.4rem 1rem; }
     .try:not(.mini) .x { background: rgba(0,0,0,0.45); color: #fff; }
     .bracket-label { --bracket-text: rgba(243,241,231,0.75); margin: 0 0 0.6rem; font-size: 0.75rem; }
     .title { font-size: 1.15rem; font-weight: 700; line-height: 1.25; margin: 0 1.2rem 0.5rem 0; }
@@ -98,6 +98,7 @@ export class TryItComponent {
     shown = signal(false);
     closed = signal(false);
     mini = signal(false);
+    photoOk = signal(true);
     justCopied = signal(false);
     copiedOnce = signal(false);
 
