@@ -296,6 +296,16 @@ interface SectionData {
     }
     .deeper-head .bracket-label { margin-bottom: 1rem; }
     #go-deeper { display: block; margin-bottom: var(--section-y) !important; }
+    /* Go deeper panels: titles sized to their column so they never run into the picture */
+    #go-deeper ::ng-deep .text-container { flex: 0 0 40%; max-width: 40%; min-width: 0; position: relative; z-index: 2; }
+    #go-deeper ::ng-deep .content-slot:empty { display: none; }
+    #go-deeper ::ng-deep .section-title { font-size: clamp(2.4rem, 4.6vw, 5.2rem); overflow-wrap: normal; hyphens: none; }
+    #go-deeper ::ng-deep .section-image-container { flex: 1 1 0; min-width: 0; margin-right: 0; justify-content: center; }
+    #go-deeper ::ng-deep .section-image { width: 100%; max-height: 60vh; object-fit: contain; }
+    @media (max-width: 900px) {
+      #go-deeper ::ng-deep .text-container { max-width: 100%; flex: 0 0 auto; }
+      #go-deeper ::ng-deep .section-title { font-size: clamp(2.2rem, 10vw, 3.4rem); }
+    }
     .deeper-title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; line-height: 1.15; margin: 0 0 0.75rem; }
     .deeper-lead { font-size: 1.1rem; line-height: 1.6; color: #3d3d3d; margin: 0; max-width: 760px; }
 

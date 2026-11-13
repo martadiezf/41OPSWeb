@@ -74,31 +74,36 @@ import { DOCUMENT } from '@angular/common';
     }
 
     /* ─── Mobile Scroll Indicator ─── */
+    .mobile-scroll-indicator { display: none; }
+
+    @media (min-width: 901px) {
     .mobile-scroll-indicator {
-      /* Desktop: a small pill over the bottom of the carousel; the panels stay usable */
-      display: flex;
-      position: absolute;
-      left: 50%;
-      bottom: 4.5rem;
-      transform: translateX(-50%);
-      z-index: 20;
-      align-items: center;
-      gap: 0.6rem;
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 100px;
-      padding: 0.6rem 1.25rem;
-      font-family: 'PP Supply Mono Regular', monospace;
-      font-size: 0.85rem;
-      color: #1a1a1a;
-      white-space: nowrap;
-      pointer-events: none;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+        /* Desktop: a small pill over the bottom of the carousel; the panels stay usable */
+        display: flex;
+        position: absolute;
+        left: 50%;
+        bottom: 4.5rem;
+        transform: translateX(-50%);
+        z-index: 20;
+        align-items: center;
+        gap: 0.6rem;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+        padding: 0.6rem 1.25rem;
+        font-family: 'PP Supply Mono Regular', monospace;
+        font-size: 0.85rem;
+        color: #1a1a1a;
+        white-space: nowrap;
+        pointer-events: none;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      }
     }
+
     @media (min-width: 901px) {
       .mobile-scroll-indicator { animation: hintIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); }
+      .mobile-scroll-indicator img { width: 28px; height: auto; }
     }
-    .mobile-scroll-indicator img { width: 28px; height: auto; }
     @keyframes hintIn { from { opacity: 0; transform: translate(-50%, 12px); } to { opacity: 1; transform: translate(-50%, 0); } }
 
     @media (max-width: 900px) {

@@ -235,7 +235,7 @@ export const EN: Translations = {
       `,
         },
         {
-            title: 'Behind-the-scenes',
+            title: 'Behind the scenes',
             modalContent: `
         <p>This is what makes pre-production and production possible after the training.</p>
         <p>Our laser-focus is the Machine in Machine Learning: M1, novel models built for each problem, and M2, the machine that governs them.</p>
