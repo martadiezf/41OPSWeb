@@ -1,5 +1,5 @@
 import { Translations } from './translations.type';
-import { DATA_MAPS_PROMPT_ES } from './data-maps-prompt';
+import { EXPERIMENT_PROMPT } from './data-maps-prompt';
 
 export const ES: Translations = {
     navBar: {
@@ -179,7 +179,7 @@ export const ES: Translations = {
             {
                 title: 'PIONEROS DE LA CAPA DE FEDERACIÓN QUE LE FALTA A LA IA AGÉNTICA',
                 description: 'Gozamos de un sólido reconocimiento como pioneros mundiales de la IA Agéntica basada en estrategias - la Máquina en el Machine Learning. Comenzamos en 2015 y publicamos nuestros resultados en nuestro primer informe - Data MAPs.\n\nNo confíes solo en nuestra palabra. Pregúntale a tu LLM preferido, aquí.',
-                prompt: DATA_MAPS_PROMPT_ES,
+                prompt: EXPERIMENT_PROMPT,
                 testimonials: [
                     {
                         name: 'Banco del IBEX',

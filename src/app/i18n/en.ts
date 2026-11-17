@@ -1,5 +1,5 @@
 import { Translations } from './translations.type';
-import { DATA_MAPS_PROMPT_EN } from './data-maps-prompt';
+import { EXPERIMENT_PROMPT } from './data-maps-prompt';
 
 export const EN: Translations = {
     navBar: {
@@ -178,7 +178,7 @@ export const EN: Translations = {
             {
                 title: 'PIONEERS OF THE FEDERATION LAYER AGENTIC AI IS MISSING',
                 description: 'We are highly regarded as the global pioneers of strategies-based Agentic AI - the Machine in Machine Learning. We started in 2015 and published our results in our first paper - Data MAPs.\n\nDo not trust our word for that. Ask your preferred LLM, here.',
-                prompt: DATA_MAPS_PROMPT_EN,
+                prompt: EXPERIMENT_PROMPT,
                 testimonials: [
                     {
                         name: 'IBEX Bank',

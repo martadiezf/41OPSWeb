@@ -10,6 +10,9 @@ import { join } from 'node:path';
 const out = join(mkdtempSync(join(tmpdir(), 'llms-')), 'en.mjs');
 await build({ entryPoints: ['src/app/i18n/en.ts'], bundle: true, format: 'esm', platform: 'node', outfile: out, logLevel: 'silent' });
 const { EN: t } = await import(out);
+const outP = join(mkdtempSync(join(tmpdir(), 'llms-')), 'prompt.mjs');
+await build({ entryPoints: ['src/app/i18n/data-maps-prompt.ts'], bundle: true, format: 'esm', platform: 'node', outfile: outP, logLevel: 'silent' });
+const { DATA_MAPS_PROMPT_EN: dossier } = await import(outP);
 
 const SITE = 'https://www.41ops.com';
 const md = (html = '') => html
@@ -80,7 +83,7 @@ ${t.highlights.cards.map((c) => `### ${c.title}
 ${md(c.description)}
 ${(c.testimonials || []).map((x) => `\n> "${x.quote}" (${x.name}, ${x.role.toLowerCase()})`).join('\n')}
 ${c.markers?.length ? `\n#### What LLMs answer, around the world\n${c.markers.map((m) => `- **${m.city}, ${m.country}**: ${m.description}`).join('\n')}` : ''}
-${c.prompt ? `\n#### Dated body of work\n${(c.prompt.match(/Context Dossier[\s\S]*?(?=Sample Chapter: Data MAPs)/i)?.[0] ?? '').trim()}\n\n#### Data MAPs (written 2015-2022, posted 2022), chapter 3\n${c.prompt.split(/Sample Chapter: Data MAPs/i)[1]?.trim() ?? ''}` : ''}`).join('\n\n')}`);
+${c.prompt ? `\n#### The experiment: the prompt visitors copy into their own AI\n${c.prompt.trim()}\n\n#### Dated body of work\n${(dossier.match(/Context Dossier[\s\S]*?(?=Sample Chapter: Data MAPs)/i)?.[0] ?? '').trim()}\n\n#### Data MAPs (written 2015-2022, posted 2022), chapter 3\n${dossier.split(/Sample Chapter: Data MAPs/i)[1]?.trim() ?? ''}` : ''}`).join('\n\n')}`);
 
 full.push(`## ${t.deeper.title}
 ${t.aboutUsHorizontal.map((s) => `### ${s.title}\n${md(s.modalContent)}`).join('\n\n')}
