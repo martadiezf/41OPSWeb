@@ -2,90 +2,150 @@
     display: block;
     width: 100%;
     scroll-snap-align: start;
-    scroll-snap-stop: always;
 }
 
-.stw-container {
-    padding: 80px 5% 120px 5%;
+.stw {
+    background-color: #f4f1ea;
+    color: #1a1a1a;
+    padding: var(--section-y) var(--section-x);
     display: flex;
     justify-content: center;
-    background-color: var(--stw-bg-color, #F3F1E7);
+    font-family: 'Inter', sans-serif;
 }
 
-.content-wrapper {
-    max-width: 900px;
+.stw-inner {
     width: 100%;
+    max-width: 1080px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 3rem;
+    gap: var(--block-gap);
 }
 
-.title-col {
-    width: 100%;
-}
-
-.desc-col {
-    width: 100%;
+.block {
+    display: flex;
+    flex-direction: column;
 }
 
 .stw-title {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.25rem);
     font-weight: 400;
     line-height: 1.05;
-    margin: 0;
     letter-spacing: -0.01em;
+    margin: 0;
+    text-align: center;
 }
 
-/* Style for underlined text passed via innerHTML */
-::ng-deep .stw-title u,
-::ng-deep .stw-title span.underline {
+::ng-deep .stw-title u {
     text-decoration: none;
     border-bottom: 4px solid currentColor;
-    font-style: normal;
     font-weight: 700;
     padding-bottom: 2px;
-    display: inline-block;
-    line-height: inherit;
 }
 
-.stw-description {
-    font-size: 1.55rem;
-    line-height: 1.7;
-    font-weight: 100;
-    margin: 0 auto;
+.stw-lead {
+    font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+    font-weight: 600;
+    line-height: 1.35;
     letter-spacing: -0.01em;
-    max-width: 800px;
-    white-space: pre-line;
-    text-align: left;
+    margin: 0 auto;
+    max-width: 880px;
+    text-align: center;
 }
 
-::ng-deep .part-stw-extension {
-    font-size: 0.85em;
-    display: block;
-    margin-top: 1.5rem;
+/* Idea to company */
+.pipeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.pipe {
+    background: #FFFFFF;
+    border: 1px solid #E2DED1;
+    border-radius: 12px;
+    padding: 1rem 0.9rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.pipe-n {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--color-1, #E85D04);
+}
+
+.pipe-title {
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.pipe-text {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: #4a4a4a;
+}
+
+/* Conglomerate */
+.conglomerate {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.conglomerate-img {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    justify-self: center;
+}
+
+.conglomerate-note {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Bridge + intro */
+.stw-bridge,
+.stw-intro {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 780px;
+    text-align: center;
+}
+
+.stw-bridge {
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.stw-intro {
+    color: #3d3d3d;
+}
+
+/* Lead-in to the three step bands */
+.steps-note {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #5a5a5a;
+    text-align: center;
+    margin: 0;
 }
 
 @media (max-width: 900px) {
-    .content-wrapper {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .title-col,
-    .desc-col {
-        flex: auto;
-        max-width: 100%;
-        padding-top: 0;
-    }
-
-    .stw-title {
-        font-size: clamp(2.5rem, 8vw, 4rem);
-    }
-
-    .stw-description {
-        font-size: 1.25rem;
-    }
+    .pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .conglomerate { grid-template-columns: minmax(0, 1fr); gap: 24px; text-align: center; }
+    .conglomerate-img { max-width: 320px; }
+    .conglomerate-note { font-size: 1.12rem; }
 }

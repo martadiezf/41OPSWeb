@@ -11,10 +11,72 @@ export interface Translations {
     hero: {
         title: string;
         subtitle: string;
+        description: string;
     };
     partStw: {
         titleHtml: string;
+        lead: string;
+        pipelineLabel: string;
+        pipeline: Array<{ title: string; text: string }>;
+        pipelineNote: string;
+        bridge: string;
+        intro: string;
+        stepsLabel: string;
+        steps: Array<{ number: string; title: string; tag: string; text: string }>;
+        stepsNote: string;
+        doorsLabel: string;
+        doors: Array<{ title: string; text: string }>;
+        modesLabel: string;
+        modes: Array<{ title: string; text: string }>;
+        closing: string;
+    };
+    deeper: {
+        label: string;
+        title: string;
+        lead: string;
+        moreLabel: string;
+        toolkit: { title: string; teaser: string };
+        teasers: string[];
+    };
+    training: {
+        label: string;
+        title: string;
+        lead: string;
+        audiences: Array<{ who: string; title: string; text: string }>;
+    };
+    tryIt: {
+        label: string;
+        title: string;
+        text: string;
+        copy: string;
+        copied: string;
+        openIn: string;
+        reopen: string;
+        close: string;
+    };
+    edge: {
+        label: string;
+        title: string;
+        text: string;
+    };
+    seo: {
+        title: string;
         description: string;
+    };
+    approach: {
+        eyebrow: string;
+        title: string;
+        lead: string;
+        columns: Array<{ title: string; subtitle: string; steps: string[]; artifact: string; highlight?: boolean }>;
+        timeline: Array<{ label: string; title: string; text: string }>;
+        m1Label: string;
+        m1Title: string;
+        m1Text: string;
+        plugLabel: string;
+        plugTitle: string;
+        plugLead: string;
+        layers: Array<{ title: string; text: string }>;
+        closing: string;
     };
     highlights: {
         sectionTitle: string;
@@ -121,6 +183,7 @@ export interface Translations {
     contactUs: {
         title: string;
         addressLines: string[];
+        openMap: string;
     };
     footer: {
         isoText: string;

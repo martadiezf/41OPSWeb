@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, input, output, booleanAttribute, inject, signal } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input, output, booleanAttribute, inject, signal, afterNextRender } from '@angular/core';
 import { SectionIndicatorComponent } from '../section-indicator/section-indicator.component';
 import { SideNavComponent } from '../side-nav/side-nav.component';
 import { SpacebarButtonComponent } from '../spacebar-button/spacebar-button.component';
@@ -29,7 +29,7 @@ import { TranslationService } from '../../i18n/translation.service';
     <div class="section-content" [class.full-width]="isAccordionSection() || fullWidth()" [class.has-image]="image()" [class.align-start]="!image()">
       @if (!isAccordionSection()) {
         <div class="text-container">
-          <h1 class="section-title">{{ title() }}</h1>
+          <h2 class="section-title">{{ title() }}</h2>
           @if (subtitle()) {
             <p class="section-subtitle">{{ subtitle() }}</p>
           }
@@ -56,9 +56,7 @@ import { TranslationService } from '../../i18n/translation.service';
     <div class="right-nav">
       @if (totalSections() > 0 && !isAccordionSection() && !fullWidth()) {
         <app-side-nav [totalSections]="totalSections()" [currentSection]="globalCurrentSection()" [style.--nav-color]="navColor()" (sectionClicked)="navigate.emit($event)" />
-        @if (sectionIndex() < totalSections() - 1) {
-          <app-spacebar-button [isActive]="globalCurrentSection() === sectionIndex()" (pressed)="nextSection.emit()" />
-        }
+        <app-spacebar-button [isActive]="globalCurrentSection() === sectionIndex()" (pressed)="nextSection.emit()" />
       }
     </div>
   `,
@@ -150,6 +148,7 @@ import { TranslationService } from '../../i18n/translation.service';
       text-align: left;
       padding: 2rem 0;
       flex: 1; /* Takes available space */
+      min-width: 0; /* allow shrinking so the right-hand controls never get pushed out */
       max-width: 1400px; 
       opacity: 1;
       transform: translateY(0);
@@ -401,6 +400,14 @@ export class SectionComponent {
   isFolded = input(false);
 
   hovered = signal(false);
+
+  constructor() {
+    // Load the hover picture up front so the swap is instant instead of a blank flash.
+    afterNextRender(() => {
+      const src = this.hoverImage();
+      if (src) { const img = new Image(); img.src = src; }
+    });
+  }
 
   sectionIndex = input(0);
   totalSections = input(0);

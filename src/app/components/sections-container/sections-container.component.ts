@@ -34,10 +34,11 @@ import { DOCUMENT } from '@angular/common';
             </div>
 
             @if (showScrollIndicator()) {
-              <div class="mobile-scroll-indicator">
-                <img src="img/logo-nav-bar.gif" alt="Robot Indicator" class="indicator-bot">
+              <button type="button" class="mobile-scroll-indicator" (click)="onIndicatorClick($event)" (touchstart)="$event.stopPropagation()">
+                <img src="img/logo-nav-bar.gif" alt="" class="indicator-bot">
                 <span class="indicator-text" [innerHTML]="indicatorText()"></span>
-              </div>
+                <span class="indicator-arrow" aria-hidden="true">→</span>
+              </button>
             }
         </div>
     `,
@@ -74,14 +75,47 @@ import { DOCUMENT } from '@angular/common';
     }
 
     /* ─── Mobile Scroll Indicator ─── */
+    .mobile-scroll-indicator { display: none; font: inherit; }
+    .indicator-arrow { font-size: 1.1em; color: var(--color-1, #E85D04); transition: transform 0.2s ease; }
+    .mobile-scroll-indicator:hover .indicator-arrow { transform: translateX(3px); }
+
+    @media (min-width: 901px) {
     .mobile-scroll-indicator {
-      display: none; /* Hidden by default on desktop */
+        /* Desktop: a small pill over the bottom of the carousel; the panels stay usable */
+        display: flex;
+        position: absolute;
+        left: 50%;
+        bottom: 4.5rem;
+        transform: translateX(-50%);
+        z-index: 20;
+        align-items: center;
+        gap: 0.6rem;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+        padding: 0.6rem 1.25rem;
+        font-family: 'PP Supply Mono Regular', monospace;
+        font-size: 0.85rem;
+        color: #1a1a1a;
+        white-space: nowrap;
+        pointer-events: auto;
+        cursor: pointer;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      }
     }
-    
-    .sections-track.blurred {
-      filter: blur(4px);
-      transition: filter 0.8s ease;
-      pointer-events: none; /* Prevent accidental interactions while blurred */
+
+    @media (min-width: 901px) {
+      .mobile-scroll-indicator { animation: hintIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); }
+      .mobile-scroll-indicator img { width: 28px; height: auto; }
+    }
+    @keyframes hintIn { from { opacity: 0; transform: translate(-50%, 12px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
+    @media (max-width: 900px) {
+      .sections-track.blurred {
+        filter: blur(4px);
+        transition: filter 0.8s ease;
+        pointer-events: none; /* Prevent accidental interactions while blurred */
+      }
     }
 
     @media (max-width: 900px) {
@@ -100,7 +134,8 @@ import { DOCUMENT } from '@angular/common';
         align-items: center;
         gap: 1rem;
         z-index: 10000;
-        pointer-events: none; /* Let clicks pass through */
+        pointer-events: auto; /* tapping the hint moves to the next message */
+        cursor: pointer;
         animation: indicatorFadeIn 1s cubic-bezier(0.2, 0.8, 0.2, 1);
         white-space: nowrap;
       }
@@ -306,7 +341,7 @@ export class SectionsContainerComponent implements OnDestroy {
     }
 
     private onWheel(e: WheelEvent) {
-        this.hideMobileIndicator();
+        // hint stays until the carousel actually moves (see navigateHorizontal)
         if (this.isTransitioning) {
             if (this.isHorizontal()) e.preventDefault();
             return;
@@ -333,8 +368,12 @@ export class SectionsContainerComponent implements OnDestroy {
     }
 
     private onKey(e: KeyboardEvent) {
-        this.hideMobileIndicator();
+        // hint stays until the carousel actually moves (see navigateHorizontal)
         if (this.isTransitioning || !this.isHorizontal()) return;
+        // Only steer the carousel while it is the thing on screen; otherwise arrows scroll the page as usual.
+        const r = this.elementRef.nativeElement.getBoundingClientRect();
+        const mid = window.innerHeight / 2;
+        if (r.top > mid || r.bottom < mid) return;
 
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
             e.preventDefault();
@@ -371,6 +410,7 @@ export class SectionsContainerComponent implements OnDestroy {
     private navigateHorizontal(index: number) {
         const clamped = Math.max(0, Math.min(index, this.sections.length - 1));
         if (clamped === this.currentIndex()) return;
+        this.hideMobileIndicator();
 
         this.isTransitioning = true;
 
@@ -387,9 +427,18 @@ export class SectionsContainerComponent implements OnDestroy {
 
     /* ───────── Shared ───────── */
 
+    /** The hint says 'to the right': clicking or tapping it does exactly that. */
+    onIndicatorClick(e: Event) {
+        e.stopPropagation();
+        this.hideMobileIndicator();
+        this.navigateNext();
+    }
+
     navigateNext() {
         if (this.isHorizontal()) {
-            this.navigateHorizontal(this.currentIndex() + 1);
+            // From the last panel, the space bar goes back to the first one
+            const n = this.sections.length;
+            this.navigateHorizontal(n ? (this.currentIndex() + 1) % n : 0);
         } else {
             const nextIndex = Math.min(this.currentIndex() + 1, this.sections.length - 1);
             this.navigateToSection(nextIndex);
@@ -429,12 +478,12 @@ export class SectionsContainerComponent implements OnDestroy {
                     }
 
                     // Trigger mobile indicator on first appearance if mobile and on first section
-                    if (entry.isIntersecting && window.innerWidth <= 900 && !this.hasInteracted() && this.currentIndex() === 0) {
+                    if (entry.isIntersecting && this.isHorizontal() && !this.hasInteracted() && this.currentIndex() === 0) {
                         this.triggerMobileIndicator();
                     }
                 });
             },
-            { root: null, threshold: 0.2 }
+            { root: null, threshold: 0.35 }
         );
         visibilityObserver.observe(container);
     }

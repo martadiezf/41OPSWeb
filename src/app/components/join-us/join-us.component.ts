@@ -19,7 +19,7 @@ export interface JobOffer {
     <!-- ══ HERO SECTION ══ -->
     <div class="hero-section">
       <div class="hero-content">
-        <h1 class="hero-title">{{ title() }}</h1>
+        <h2 class="hero-title">{{ title() }}</h2>
         <div class="hero-description" [innerHTML]="description()"></div>
       </div>
     </div>
@@ -120,7 +120,7 @@ export interface JobOffer {
        HERO SECTION
        ═══════════════════════════════════════════════════════ */
     .hero-section {
-      padding: 6rem 5% 4rem 5%;
+      padding: var(--section-y) var(--section-x);
       border-bottom: 1px solid rgba(232, 93, 4, 0.3);
       position: relative;
       overflow: hidden;
@@ -197,7 +197,7 @@ export interface JobOffer {
        JOBS GRID SECTION
        ═══════════════════════════════════════════════════════ */
     .jobs-section {
-      padding: 4rem 120px 6rem 120px;
+      padding: 4rem 120px var(--section-y) 120px;
       position: relative;
       max-width: 1000px;
       margin: 0 auto;
@@ -512,7 +512,7 @@ export interface JobOffer {
        ═══════════════════════════════════════════════════════ */
     @media (max-width: 900px) {
       .hero-section {
-        padding: 4rem 1.5rem 3rem 1.5rem;
+        padding: var(--section-y) var(--section-x);
       }
 
       .hero-title {
@@ -520,7 +520,7 @@ export interface JobOffer {
       }
 
       .jobs-section {
-        padding: 3rem 1.5rem 4rem 1.5rem;
+        padding: 3rem 1.5rem var(--section-y) 1.5rem;
       }
 
       .jobs-grid {

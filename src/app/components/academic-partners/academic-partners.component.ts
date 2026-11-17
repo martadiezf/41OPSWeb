@@ -42,7 +42,7 @@ export interface AcademicPartner {
       display: block;
       width: 100%;
       height: 100%;
-      padding: 4rem 5%;
+      padding: var(--section-y) var(--section-x);
       color: var(--text-muted, #666);
       font-family: 'Inter', sans-serif;
       display: flex;

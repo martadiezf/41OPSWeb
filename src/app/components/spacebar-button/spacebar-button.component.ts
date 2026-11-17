@@ -16,10 +16,10 @@ import {
     'class': 'spacebar__button',
     '[class.is-pressed]': 'isPressed()',
     '(mousedown)': 'startPress($event)',
-    '(mouseup)': 'cancelPress()',
+    '(mouseup)': 'releasePress()',
     '(mouseleave)': 'cancelPress()',
     '(touchstart)': 'startPress($event)',
-    '(touchend)': 'cancelPress()',
+    '(touchend)': 'releasePress()',
   },
   templateUrl: `spacebar_button_template.html`,
   styleUrl: './spacebar_button_styles.css',
@@ -54,8 +54,9 @@ export class SpacebarButtonComponent implements OnDestroy {
 
   private keyupHandler = (event: KeyboardEvent) => {
     if (event.code === 'Space') {
+      const mine = this.isHandlingPress;
       this.isHandlingPress = false;
-      this.cancelPress();
+      if (mine) this.releasePress(); else this.cancelPress();
     }
   };
 
@@ -130,6 +131,15 @@ export class SpacebarButtonComponent implements OnDestroy {
     this.pressTimer = setTimeout(() => {
       this.completeAction();
     }, this.ANIMATION_DURATION);
+  }
+
+  /** Letting go before the fill finishes still moves on: a quick tap works, a hold plays the animation. */
+  releasePress() {
+    if (this.isPressed() && this.pressTimer) {
+      this.completeAction();
+    } else {
+      this.cancelPress();
+    }
   }
 
   cancelPress() {

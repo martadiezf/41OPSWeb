@@ -1,10 +1,35 @@
-<section class="stw-container" [style.background-color]="backgroundColor()" [style.color]="textColor()">
-    <div class="content-wrapper">
-        <div class="title-col">
-            <h2 [innerHTML]="titleHtml()" class="stw-title" [style.font-family]="titleFont()"></h2>
+<section class="stw">
+    <div class="stw-inner">
+        <h2 class="stw-title" id="part-of-scitheworld" [innerHTML]="content().titleHtml"></h2>
+        <p class="stw-lead">{{ content().lead }}</p>
+
+        <div class="block">
+            <p class="bracket-label center">{{ content().pipelineLabel }}</p>
+            <ol class="pipeline">
+                @for (p of content().pipeline; track p.title; let i = $index) {
+                    <li class="pipe">
+                        <span class="pipe-n">{{ i + 1 }}</span>
+                        <span class="pipe-title">{{ p.title }}</span>
+                        <span class="pipe-text">{{ p.text }}</span>
+                    </li>
+                }
+            </ol>
         </div>
-        <div class="desc-col">
-            <div class="stw-description" [style.font-family]="descriptionFont()" [innerHTML]="descriptionHtml()"></div>
+
+        <div class="block conglomerate">
+            <img class="conglomerate-img" src="img/Extreme-Efficient_group.png"
+                 [alt]="content().pipelineNote" />
+            <p class="conglomerate-note">{{ content().pipelineNote }}</p>
+        </div>
+
+        <div class="block">
+            <p class="stw-bridge">{{ content().bridge }}</p>
+            <p class="stw-intro">{{ content().intro }}</p>
+        </div>
+
+        <div class="block steps-intro">
+            <p class="bracket-label center">{{ content().stepsLabel }}</p>
+            <p class="steps-note">{{ content().stepsNote }}</p>
         </div>
     </div>
 </section>

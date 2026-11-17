@@ -631,3 +631,46 @@
         /* Hide "closed" title when expanded */
     }
 }
+/* Same section rhythm as the rest of the page: the sticky frame gets the
+   standard top/bottom padding and the cards fill whatever is left, so the gap
+   before and after Highlights matches every other section. */
+@media (min-width: 769px) {
+    .sticky-wrapper {
+        box-sizing: border-box;
+        justify-content: flex-start;
+        padding: var(--section-y) 0;
+    }
+
+    .scroll-cards-container {
+        flex: 1 1 auto;
+        min-height: 0;
+        height: auto;
+        margin-top: 0;
+    }
+}
+
+/* Phones: the cards stack, so Highlights becomes a normal section with the standard rhythm. */
+@media (max-width: 768px) {
+    .scroll-section {
+        height: auto !important;
+    }
+
+    .sticky-wrapper {
+        position: static;
+        height: auto;
+        padding: var(--section-y) 0;
+        box-sizing: border-box;
+    }
+
+    .section-header {
+        margin-top: 0;
+    }
+
+    .scroll-section {
+        padding-bottom: 0;
+    }
+
+    .scroll-cards-container {
+        margin: 0 auto;
+    }
+}

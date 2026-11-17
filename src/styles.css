@@ -14,6 +14,11 @@
     --color-5: #3b19b4;
     /* Morado Profundo */
 
+    /* Ritmo vertical: misma distancia en todas las secciones */
+    --section-y: 96px;
+    --section-x: 5%;
+    --block-gap: 48px;
+
     /* Tipografía */
     --font-heading: 'Bebas Neue', 'Impact', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -96,7 +101,8 @@ app-contact-us,
 }
 
 app-logo-carousel {
-    margin-top: 10rem;
+    display: block;
+    padding-top: var(--section-y);
 }
 
 /* ============================================
@@ -135,3 +141,37 @@ app-logo-carousel {
     color: #ffffff;
     opacity: 1;
 }
+/* Ritmo vertical en móvil */
+@media (max-width: 900px) {
+    :root {
+        --section-y: 72px;
+        --section-x: 6%;
+        --block-gap: 36px;
+    }
+}
+
+/* Etiqueta de sección con corchetes: [ TÍTULO ] — mismo formato que Highlights y Brands */
+.bracket-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "PP Supply Mono Regular", "PP Supply Mono Regular Placeholder", monospace;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--bracket-text, rgba(0, 0, 0, 0.5));
+    margin: 0 0 1.25rem;
+}
+
+.bracket-label::before,
+.bracket-label::after {
+    font-weight: 800;
+    color: var(--bracket-color, var(--color-1, #E85D04));
+}
+
+.bracket-label::before { content: '['; }
+.bracket-label::after { content: ']'; }
+
+.bracket-label.center { align-self: center; }

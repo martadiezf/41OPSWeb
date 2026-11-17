@@ -7,6 +7,11 @@ import { AwardsListComponent } from './components/awards-list/awards-list.compon
 import { LogoCarouselComponent } from './components/logo-carousel/logo-carousel.component';
 import { NavBarComponent, NavCommand } from './components/nav-bar/nav-bar.component';
 import { PartStwComponent } from './components/part-stw/part-stw.component';
+import { ApproachComponent } from './components/approach/approach.component';
+import { TryItComponent } from './components/try-it/try-it.component';
+import { DeeperTile } from './components/deeper/deeper.component';
+import { BandComponent } from './components/band/band.component';
+import { TrainingComponent } from './components/training/training.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
 import { CursorFollowerComponent } from './components/cursor-follower/cursor-follower.component';
 import { PapersListComponent, Paper } from './components/papers-list/papers-list.component';
@@ -43,6 +48,7 @@ interface SectionData {
   selector: 'app-root',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
+    TryItComponent,
     NavBarComponent,
     HeroComponent,
     SectionsContainerComponent,
@@ -50,6 +56,9 @@ interface SectionData {
     AwardsListComponent,
     LogoCarouselComponent,
     PartStwComponent,
+    ApproachComponent,
+    BandComponent,
+    TrainingComponent,
 
     PreloaderComponent,
     CursorFollowerComponent,
@@ -90,13 +99,29 @@ interface SectionData {
       [showBrackets]="true"
       bracketsColor="var(--color-1)"
       subtitleColor="gray"
-      description=""
+      [description]="ts.t().hero.description"
     />
 
-    <app-part-stw
-      [titleHtml]="ts.t().partStw.titleHtml"
-      [description]="ts.t().partStw.description"
-    />
+    <app-part-stw [content]="ts.t().partStw" />
+
+    @for (step of ts.t().partStw.steps; track step.number; let i = $index) {
+      <app-band
+        [color]="stepBands[i].color"
+        ink="#FFFFFF"
+        bracketColor="#FFFFFF"
+        [image]="stepBands[i].image"
+        [imageAlt]="step.title"
+        [label]="step.number + ' · ' + step.tag"
+        [title]="step.title"
+        [text]="step.text"
+        [level]="3"
+        [reverse]="i % 2 === 1"
+      />
+    }
+
+    <app-training id="ways-in" [ways]="ts.t().partStw" />
+
+    <app-approach id="approach" [content]="ts.t().approach" />
 
     <app-accordion
       id="highlights-accordion"
@@ -119,31 +144,6 @@ interface SectionData {
     />
 
 
-    <app-sections-container
-      layout="horizontal"
-      viewportHeightVh="85"
-      (sectionChanged)="onSectionChanged($event)"
-      (navigateRequest)="handleNavigateRequest($event)"
-      #horizontalContainer
-      id="highlights"
-    >
-      @for (section of horizontalSections(); track section.id) {
-        <app-section
-          [id]="section.id"
-          [title]="section.title"
-          [subtitle]="section.subtitle"
-          [backgroundColor]="section.backgroundColor"
-          [navColor]="section.navColor || '#000000'"
-          [image]="section.image"
-          [hoverImage]="section.hoverImage"
-          [totalSections]="horizontalSections().length"
-          [sectionIndex]="$index"
-          [globalCurrentSection]="horizontalContainer.currentIndex()"
-          (navigate)="horizontalContainer.scrollToSection($event)"
-          (nextSection)="horizontalContainer.navigateNext()"
-        />
-      }
-    </app-sections-container>
 
     <div class="awards-block" id="partners">
       <app-academic-partners
@@ -155,78 +155,50 @@ interface SectionData {
       />
     </div>
 
-    <!-- NEW: Horizontal container with 5 sections -->
-    <app-sections-container
-      layout="horizontal"
-      viewportHeightVh="85"
-      (sectionChanged)="onSectionChanged($event)"
-      (navigateRequest)="handleNavigateRequest($event)"
-      #horizontalContainerNew
-      id="about-us"
-    >
-      @for (section of horizontalSectionsNew(); track section.id) {
-        <app-section
-          [id]="section.id"
-          [title]="section.title"
-          [subtitle]="section.subtitle"
-          [backgroundColor]="section.backgroundColor"
-          [navColor]="section.navColor || '#000000'"
-          [textColor]="section.textColor || '#ffffff'"
-          [image]="section.image"
-          [modalContent]="section.modalContent"
-          (requestModal)="openModal($event)"
-          [totalSections]="horizontalSectionsNew().length"
-          [sectionIndex]="$index"
-          [globalCurrentSection]="horizontalContainerNew.currentIndex()"
-          (navigate)="horizontalContainerNew.scrollToSection($event)"
-          (nextSection)="horizontalContainerNew.navigateNext()"
-        >
-          @if (section.customContent) {
-            <div [innerHTML]="section.customContent" class="section-custom-content"></div>
-          }
-        </app-section>
-      }
-    </app-sections-container>
 
     <!-- MOVED: Awards List -->
     <div class="awards-block" id="awards">
       <app-awards-list />
     </div>
 
-    <!-- NEW: Vertical container for unbeatable -->
+
+    <app-logo-carousel id="who-trust-us" />
+
+    <section class="deeper-head" id="about-us" aria-labelledby="deeper-title">
+      <p class="bracket-label">{{ ts.t().deeper.label }}</p>
+      <h2 class="deeper-title" id="deeper-title">{{ ts.t().deeper.title }}</h2>
+      <p class="deeper-lead">{{ ts.t().deeper.lead }}</p>
+    </section>
+
+    <!-- Original horizontal carousel: full-width panels, space bar moves to the next one -->
     <app-sections-container
-      layout="vertical"
+      layout="horizontal"
       viewportHeightVh="85"
       (sectionChanged)="onSectionChanged($event)"
       (navigateRequest)="handleNavigateRequest($event)"
-      #verticalContainerUnbeatable
-      id="unbeatable-container"
+      #deeperContainer
+      id="go-deeper"
     >
-      @for (section of verticalSectionsUnbeatable(); track section.id) {
+      @for (section of deeperPanels(); track section.id) {
         <app-section
           [id]="section.id"
           [title]="section.title"
           [subtitle]="section.subtitle"
           [backgroundColor]="section.backgroundColor"
-          [navColor]="section.navColor || '#000000'"
+          [navColor]="section.navColor || '#ffffff'"
           [textColor]="section.textColor || '#ffffff'"
           [image]="section.image"
+          [hoverImage]="section.hoverImage"
           [modalContent]="section.modalContent"
           (requestModal)="openModal($event)"
-          [totalSections]="verticalSectionsUnbeatable().length"
+          [totalSections]="deeperPanels().length"
           [sectionIndex]="$index"
-          [globalCurrentSection]="verticalContainerUnbeatable.currentIndex()"
-          (navigate)="verticalContainerUnbeatable.scrollToSection($event)"
-          (nextSection)="verticalContainerUnbeatable.navigateNext()"
-        >
-          @if (section.customContent) {
-            <div [innerHTML]="section.customContent" class="section-custom-content"></div>
-          }
-        </app-section>
+          [globalCurrentSection]="deeperContainer.currentIndex()"
+          (navigate)="deeperContainer.scrollToSection($event)"
+          (nextSection)="deeperContainer.navigateNext()"
+        />
       }
     </app-sections-container>
-
-    <app-logo-carousel id="who-trust-us" />
 
     <div class="newsroom-block" id="newsroom">
       <app-newsroom 
@@ -247,7 +219,20 @@ interface SectionData {
       />
     </div>
 
+    <app-band
+      id="your-edge"
+      color="#1a1a1a"
+      ink="#F3F1E7"
+      image="img/peluca.png"
+      [imageAlt]="ts.t().edge.title"
+      [label]="ts.t().edge.label"
+      [title]="ts.t().edge.title"
+      [text]="ts.t().edge.text"
+    />
+
     <app-contact-us id="contact" />
+
+    <app-try-it [content]="ts.t().tryIt" [prompt]="ts.t().highlights.cards[1].prompt ?? ''" />
 
     <app-footer />
 
@@ -301,9 +286,39 @@ interface SectionData {
       overflow-x: clip;
     }
 
+    .deeper-head {
+      padding: var(--section-y) var(--section-x) 2.5rem;
+      max-width: 1180px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      color: #1a1a1a;
+    }
+    .deeper-head .bracket-label { margin-bottom: 1rem; }
+    #go-deeper { display: block; margin-bottom: var(--section-y) !important; }
+    /* Go deeper panels: titles sized to their column so they never run into the picture */
+    #go-deeper ::ng-deep .text-container { flex: 0 0 40%; max-width: 40%; min-width: 0; position: relative; top: 0; z-index: 2; }
+    #go-deeper ::ng-deep .content-slot:empty { display: none; }
+    #go-deeper ::ng-deep .section-title { font-size: clamp(2.4rem, 4.6vw, 5.2rem); overflow-wrap: normal; hyphens: none; }
+    #go-deeper ::ng-deep .section-image-container { flex: 1 1 0; min-width: 0; margin-right: 0; justify-content: center; }
+    #go-deeper ::ng-deep .section-image { width: 100%; max-height: 60vh; object-fit: contain; }
+    /* Toolkit panel: the diagram is wide and labelled, so it gets the full width under the title */
+    #go-deeper ::ng-deep app-section:first-of-type .section-content.has-image { flex-direction: column; align-items: stretch; justify-content: center; gap: 1.5rem; }
+    #go-deeper ::ng-deep app-section:first-of-type .text-container { flex: 0 0 auto; max-width: 100%; flex-direction: row; align-items: center; justify-content: flex-start; gap: 2rem; }
+    #go-deeper ::ng-deep app-section:first-of-type .see-more-btn { margin-top: 0; }
+    #go-deeper ::ng-deep app-section:first-of-type .section-title { font-size: clamp(2.4rem, 4vw, 4.2rem); }
+    #go-deeper ::ng-deep app-section:first-of-type .section-image-container { flex: 1 1 auto; justify-content: center; }
+    #go-deeper ::ng-deep app-section:first-of-type .section-image { width: 100%; max-height: 54vh; }
+    @media (max-width: 900px) {
+      #go-deeper ::ng-deep .text-container { max-width: 100%; flex: 0 0 auto; }
+      #go-deeper ::ng-deep .section-title { font-size: clamp(2.2rem, 10vw, 3.4rem); }
+    }
+    .deeper-title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; line-height: 1.15; margin: 0 0 0.75rem; }
+    .deeper-lead { font-size: 1.1rem; line-height: 1.6; color: #3d3d3d; margin: 0; max-width: 760px; }
+
     .awards-block {
       width: 100%;
-      padding: 4rem 0;
+      padding: 0;
       scroll-snap-align: start;
     }
 
@@ -409,6 +424,19 @@ interface SectionData {
         padding-right: 0.5rem;
     }
     
+    ::ng-deep .modal-body img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 8px;
+    }
+
+    /* Image-only pop-ups (the toolkit diagram) get a wider window so its small text stays legible. */
+    .modal-container:has(.modal-body > img:only-child) {
+        max-width: min(1240px, 95vw);
+    }
+
     ::ng-deep .modal-body ul,
     ::ng-deep .modal-body ol {
         padding-left: 2rem;
@@ -554,49 +582,13 @@ export class AppComponent {
       testimonials: this.ts.t().highlights.cards[0].testimonials,
     },
     {
-      title: this.ts.t().highlights.cards[1].title,
-      description: this.ts.t().highlights.cards[1].description,
-      icon: '',
-      images: [{ src: './img/highlights/sergio_talk_2.png', alt: 'Sergio Talk 2' }],
-      imagesStackClass: 'hide-when-open',
-      backgroundColor: 'rgba(0, 119, 182, 0.85)',
-      prompt: this.ts.t().highlights.cards[1].prompt,
-      llmLinks: [
-        { label: 'ChatGPT', url: 'https://chat.openai.com' },
-        { label: 'Claude.AI', url: 'https://claude.ai' },
-        { label: 'Gemini', url: 'https://gemini.google.com' },
-      ],
-      testimonials: this.ts.t().highlights.cards[1].testimonials,
-      markers: [
-        { id: 'san-francisco', city: this.ts.t().highlights.cards[1].markers![0].city, country: this.ts.t().highlights.cards[1].markers![0].country, x: 16.0, y: 29.0, description: this.ts.t().highlights.cards[1].markers![0].description },
-        { id: 'new-york', city: this.ts.t().highlights.cards[1].markers![1].city, country: this.ts.t().highlights.cards[1].markers![1].country, x: 29.4, y: 27.4, description: this.ts.t().highlights.cards[1].markers![1].description },
-        { id: 'los-angeles', city: this.ts.t().highlights.cards[1].markers![2].city, country: this.ts.t().highlights.cards[1].markers![2].country, x: 17.2, y: 31.1, description: this.ts.t().highlights.cards[1].markers![2].description },
-        { id: 'chicago', city: this.ts.t().highlights.cards[1].markers![3].city, country: this.ts.t().highlights.cards[1].markers![3].country, x: 25.7, y: 26.7, description: this.ts.t().highlights.cards[1].markers![3].description },
-        { id: 'houston', city: this.ts.t().highlights.cards[1].markers![4].city, country: this.ts.t().highlights.cards[1].markers![4].country, x: 23.5, y: 33.5, description: this.ts.t().highlights.cards[1].markers![4].description },
-        { id: 'philadelphia', city: this.ts.t().highlights.cards[1].markers![5].city, country: this.ts.t().highlights.cards[1].markers![5].country, x: 29.1, y: 27.8, description: this.ts.t().highlights.cards[1].markers![5].description },
-        { id: 'london', city: this.ts.t().highlights.cards[1].markers![6].city, country: this.ts.t().highlights.cards[1].markers![6].country, x: 49.9, y: 21.4, description: this.ts.t().highlights.cards[1].markers![6].description },
-        { id: 'manchester', city: this.ts.t().highlights.cards[1].markers![7].city, country: this.ts.t().highlights.cards[1].markers![7].country, x: 49.4, y: 20.3, description: this.ts.t().highlights.cards[1].markers![7].description },
-        { id: 'edinburgh', city: this.ts.t().highlights.cards[1].markers![8].city, country: this.ts.t().highlights.cards[1].markers![8].country, x: 49.1, y: 18.9, description: this.ts.t().highlights.cards[1].markers![8].description },
-        { id: 'birmingham', city: this.ts.t().highlights.cards[1].markers![9].city, country: this.ts.t().highlights.cards[1].markers![9].country, x: 49.5, y: 20.8, description: this.ts.t().highlights.cards[1].markers![9].description },
-        { id: 'new-delhi', city: this.ts.t().highlights.cards[1].markers![10].city, country: this.ts.t().highlights.cards[1].markers![10].country, x: 71.4, y: 34.1, description: this.ts.t().highlights.cards[1].markers![10].description },
-        { id: 'mumbai', city: this.ts.t().highlights.cards[1].markers![11].city, country: this.ts.t().highlights.cards[1].markers![11].country, x: 70.2, y: 39.4, description: this.ts.t().highlights.cards[1].markers![11].description },
-        { id: 'madrid', city: this.ts.t().highlights.cards[1].markers![12].city, country: this.ts.t().highlights.cards[1].markers![12].country, x: 49.0, y: 27.5, description: this.ts.t().highlights.cards[1].markers![12].description },
-        { id: 'barcelona', city: this.ts.t().highlights.cards[1].markers![13].city, country: this.ts.t().highlights.cards[1].markers![13].country, x: 50.6, y: 27.0, description: this.ts.t().highlights.cards[1].markers![13].description },
-        { id: 'tehran', city: this.ts.t().highlights.cards[1].markers![14].city, country: this.ts.t().highlights.cards[1].markers![14].country, x: 64.3, y: 30.2, description: this.ts.t().highlights.cards[1].markers![14].description },
-        { id: 'paris', city: this.ts.t().highlights.cards[1].markers![15].city, country: this.ts.t().highlights.cards[1].markers![15].country, x: 50.7, y: 22.9, description: this.ts.t().highlights.cards[1].markers![15].description },
-        { id: 'bucharest', city: this.ts.t().highlights.cards[1].markers![16].city, country: this.ts.t().highlights.cards[1].markers![16].country, x: 57.3, y: 25.3, description: this.ts.t().highlights.cards[1].markers![16].description },
-        { id: 'hong-kong', city: this.ts.t().highlights.cards[1].markers![17].city, country: this.ts.t().highlights.cards[1].markers![17].country, x: 81.7, y: 37.6, description: this.ts.t().highlights.cards[1].markers![17].description },
-        { id: 'seoul', city: this.ts.t().highlights.cards[1].markers![18].city, country: this.ts.t().highlights.cards[1].markers![18].country, x: 85.3, y: 29.1, description: this.ts.t().highlights.cards[1].markers![18].description },
-        { id: 'toronto', city: this.ts.t().highlights.cards[1].markers![19].city, country: this.ts.t().highlights.cards[1].markers![19].country, x: 27.9, y: 25.7, description: this.ts.t().highlights.cards[1].markers![19].description },
-      ],
-    },
-    {
       title: this.ts.t().highlights.cards[2].title,
       description: this.ts.t().highlights.cards[2].description,
       icon: '',
       images: [{ src: './img/highlights/sergio_talk1.png', alt: 'Sergio Talk 1' }],
       backgroundColor: 'rgba(59, 25, 180, 0.85)',
-      testimonials: this.ts.t().highlights.cards[2].testimonials,
+      // The federation card was replaced by the floating experiment; its client quotes live on here.
+      testimonials: [...(this.ts.t().highlights.cards[2].testimonials ?? []), ...(this.ts.t().highlights.cards[1].testimonials ?? [])],
     },
   ]);
 
@@ -660,6 +652,52 @@ export class AppComponent {
       modalContent: this.ts.t().aboutUsHorizontal[2].modalContent
     }
   ]);
+
+  readonly stepBands = [
+    { color: '#E63946', image: 'img/sections/scaffold_apple_tree.png' },
+    { color: '#457B9D', image: 'img/birrete.png' },
+    { color: '#2A9D8F', image: 'img/casco.png' },
+  ];
+
+  /** Go deeper carousel: the toolkit first, then the three about-us panels. */
+  deeperPanels = computed<SectionData[]>(() => {
+    const t = this.ts.t();
+    return [
+      {
+        id: 1,
+        title: t.deeper.toolkit.title,
+        subtitle: '',
+        backgroundColor: '#000000',
+        navColor: '#ffffff',
+        image: 'img/toolkit/toolkit_messages_41OPS_white.png',
+        hoverImage: 'img/toolkit/toolkit_messages_41OPS_red.png',
+        modalContent: `<img src="img/toolkit/toolkit_messages_41OPS_white.png" alt="${t.deeper.toolkit.teaser}" />`,
+      },
+      ...this.horizontalSectionsNew().map((sec, i) => ({ ...sec, id: i + 2, navColor: '#ffffff' })),
+    ];
+  });
+
+  deeperTiles = computed<DeeperTile[]>(() => {
+    const t = this.ts.t();
+    const about = this.horizontalSectionsNew();
+    const tiles: DeeperTile[] = [{
+      title: t.deeper.toolkit.title,
+      teaser: t.deeper.toolkit.teaser,
+      image: 'img/toolkit/toolkit_messages_41OPS_white.png',
+      imageAlt: t.deeper.toolkit.teaser,
+      color: '#000000',
+      content: `<img src="img/toolkit/toolkit_messages_41OPS_white.png" alt="${t.deeper.toolkit.teaser}" />`,
+    }];
+    about.forEach((sec, i) => tiles.push({
+      title: sec.title,
+      teaser: t.deeper.teasers[i] ?? '',
+      image: sec.image ?? '',
+      imageAlt: sec.title,
+      color: sec.backgroundColor,
+      content: sec.modalContent ?? '',
+    }));
+    return tiles;
+  });
 
   /* ── 2 NEW sections (extracted from horizontal) ── */
   verticalSectionsUnbeatable = computed<SectionData[]>(() => [

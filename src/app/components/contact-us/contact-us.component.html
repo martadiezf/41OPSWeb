@@ -25,13 +25,34 @@
             </a>
         </div>
 
-        <!-- Right Column: Map -->
+        <!-- Right Column: static map card (no third-party embed, so no Google cookies) -->
         <div class="map-column">
-            <div class="map-wrapper">
-                <iframe [src]="safeMapUrl" width="100%" height="100%" style="border:0;" allowfullscreen=""
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+            <a class="map-card" [href]="mapsLink()" target="_blank" rel="noopener noreferrer"
+                [attr.aria-label]="ts.t().contactUs.openMap">
+                <svg class="map-art" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                    <rect width="600" height="400" fill="#141414" />
+                    <g stroke="#262626" stroke-width="14" fill="none" stroke-linecap="round">
+                        <path d="M-20 70 L620 40" /><path d="M-20 170 L620 150" /><path d="M-20 300 L620 290" />
+                        <path d="M90 -20 L120 420" /><path d="M250 -20 L270 420" /><path d="M430 -20 L420 420" />
+                        <path d="M520 -20 L560 420" />
+                    </g>
+                    <g stroke="#333" stroke-width="26" fill="none" stroke-linecap="round">
+                        <path d="M-20 235 C 150 215, 380 250, 620 205" />
+                        <path d="M340 -20 C 330 120, 360 260, 345 420" />
+                    </g>
+                    <g stroke="#1f1f1f" stroke-width="6" fill="none">
+                        <path d="M170 -20 L190 420" /><path d="M-20 120 L620 95" /><path d="M-20 360 L620 350" />
+                    </g>
+                    <circle cx="345" cy="228" r="70" fill="#E85D04" opacity="0.08" />
+                    <circle cx="345" cy="228" r="34" fill="#E85D04" opacity="0.16" />
+                    <path d="M345 232 c-16 -20 -26 -32 -26 -46 a26 26 0 1 1 52 0 c0 14 -10 26 -26 46z" fill="#E85D04" />
+                    <circle cx="345" cy="186" r="9" fill="#141414" />
+                </svg>
+                <span class="map-caption">
+                    <span class="map-address">C. de Pradillo, 68 · 28002 Madrid</span>
+                    <span class="map-open">{{ ts.t().contactUs.openMap }} ↗</span>
+                </span>
+            </a>
         </div>
     </div>
 </section>
