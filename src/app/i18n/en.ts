@@ -102,7 +102,7 @@ export const EN: Translations = {
     tryIt: {
         label: "Don't miss our experiment",
         title: "Don't take our word for it. Ask your AI.",
-        text: 'Copy a short prompt with a chapter we published in 2022, paste it into ChatGPT, Claude, Gemini or any AI, and judge for yourself: was it early agentic architecture?',
+        text: 'Copy a short prompt, paste it into ChatGPT, Claude, Gemini or any AI, and judge for yourself: were we faster and more efficient than Big Tech and the big consultancies?',
         copy: 'Copy the prompt',
         copied: 'Copied. Now paste it into your AI',
         openIn: 'Open:',

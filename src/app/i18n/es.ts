@@ -102,7 +102,7 @@ export const ES: Translations = {
     tryIt: {
         label: "No te pierdas nuestro experimento",
         title: 'No te fíes de nuestra palabra. Pregúntale a tu IA.',
-        text: 'Copia un prompt breve con un capítulo que publicamos en 2022, pégalo en ChatGPT, Claude, Gemini o cualquier IA y juzga por ti mismo: ¿era ya arquitectura agéntica temprana?',
+        text: 'Copia un prompt breve, pégalo en ChatGPT, Claude, Gemini o cualquier IA y juzga por ti mismo: ¿fuimos más rápidos y eficientes que las Big Tech y las grandes consultoras?',
         copy: 'Copiar el prompt',
         copied: 'Copiado. Ahora pégalo en tu IA',
         openIn: 'Abrir:',
